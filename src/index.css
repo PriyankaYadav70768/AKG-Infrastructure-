@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: #1F242A;
+    background-color: #FAF9F6;
+  }
+
+  html.dark {
+    color: #E6EAF0;
+    background-color: #0A121E;
+  }
+
+  body {
+    font-family: 'Manrope', 'Inter', system-ui, sans-serif;
+    color: #1F242A;
+    background-color: #FAF9F6;
+    overflow-x: hidden;
+    letter-spacing: -0.01em;
+  }
+
+  .dark body {
+    color: #E6EAF0;
+    background-color: #0A121E;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+}
+
+/* Subtle image reveal zoom */
+.image-reveal {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.image-reveal:hover {
+  transform: scale(1.035);
+}
+
+/* Custom focus ring */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-[#1E3A5F] focus:ring-offset-2;
+}

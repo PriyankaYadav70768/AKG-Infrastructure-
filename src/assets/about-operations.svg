@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aboutSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DEE7F0" />
+      <stop offset="60%" stop-color="#EFF4F8" />
+      <stop offset="100%" stop-color="#E2EBF2" />
+    </linearGradient>
+    <linearGradient id="concreteWall" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CBD5E1" />
+      <stop offset="50%" stop-color="#94A3B8" />
+      <stop offset="100%" stop-color="#64748B" />
+    </linearGradient>
+    <linearGradient id="steelNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#234A70" />
+      <stop offset="100%" stop-color="#142B42" />
+    </linearGradient>
+    <linearGradient id="goldHues" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B58B55" />
+      <stop offset="100%" stop-color="#D6A76E" />
+    </linearGradient>
+    <pattern id="surveyGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#234A70" stroke-width="0.5" stroke-opacity="0.1" />
+    </pattern>
+    <pattern id="rebarHatch" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 0 16 L 16 0 M 0 0 L 16 16" fill="none" stroke="#64748B" stroke-width="1" stroke-opacity="0.4" />
+    </pattern>
+  </defs>
+
+  <!-- Background Sky & Grid -->
+  <rect width="1200" height="800" fill="url(#aboutSky)" />
+  <rect width="1200" height="800" fill="url(#surveyGrid)" />
+
+  <!-- Background Civil Infrastructure: Elevated Flyover / Highway Viaduct -->
+  <g opacity="0.4">
+    <!-- Massive Pier Columns -->
+    <rect x="150" y="240" width="60" height="360" fill="#94A3B8" />
+    <rect x="520" y="210" width="70" height="390" fill="#94A3B8" />
+    <rect x="910" y="250" width="60" height="350" fill="#94A3B8" />
+    <!-- Pier Caps -->
+    <polygon points="120,240 240,240 210,270 150,270" fill="#64748B" />
+    <polygon points="480,210 630,210 590,245 520,245" fill="#64748B" />
+    <polygon points="880,250 1000,250 970,280 910,280" fill="#64748B" />
+    <!-- Horizontal Deck Superstructure Span -->
+    <polygon points="0,200 1200,160 1200,230 0,270" fill="#475569" />
+    <polygon points="0,195 1200,155 1200,200 0,240" fill="#CBD5E1" />
+    <!-- Distant Tower Crane -->
+    <line x1="840" y1="90" x2="840" y2="400" stroke="#234A70" stroke-width="4" />
+    <line x1="720" y1="90" x2="1060" y2="90" stroke="#234A70" stroke-width="3" />
+    <polygon points="840,40 825,90 855,90" fill="#234A70" />
+    <line x1="840" y1="40" x2="1000" y2="90" stroke="#B58B55" stroke-width="1.5" />
+  </g>
+
+  <!-- Deep Foundation Pit & Diaphragm Retaining Wall Under Active Work -->
+  <g>
+    <!-- Stepped Earth Excavation Bench -->
+    <polygon points="0,480 380,480 440,540 1200,540 1200,800 0,800" fill="#94A3B8" />
+    <polygon points="0,520 400,520 460,590 1200,590 1200,800 0,800" fill="#475569" />
+    <polygon points="0,580 440,580 500,660 1200,660 1200,800 0,800" fill="#1E293B" />
+
+    <!-- Retaining Concrete Wall with Tie-back Anchors -->
+    <rect x="0" y="380" width="360" height="200" fill="url(#concreteWall)" />
+    <!-- Waler Beams across retaining wall -->
+    <rect x="0" y="420" width="360" height="24" fill="#234A70" stroke="#162E47" stroke-width="2" />
+    <rect x="0" y="490" width="360" height="24" fill="#234A70" stroke="#162E47" stroke-width="2" />
+    <!-- Tieback Anchor Plates & Tendons -->
+    <g fill="#B58B55" stroke="#7A5626" stroke-width="2">
+      <rect x="40" y="426" width="16" height="12" rx="2" />
+      <circle cx="48" cy="432" r="3" fill="#1E293B" />
+      <rect x="120" y="426" width="16" height="12" rx="2" />
+      <circle cx="128" cy="432" r="3" fill="#1E293B" />
+      <rect x="200" y="426" width="16" height="12" rx="2" />
+      <circle cx="208" cy="432" r="3" fill="#1E293B" />
+      <rect x="280" y="426" width="16" height="12" rx="2" />
+      <circle cx="288" cy="432" r="3" fill="#1E293B" />
+
+      <rect x="80" y="496" width="16" height="12" rx="2" />
+      <circle cx="88" cy="502" r="3" fill="#1E293B" />
+      <rect x="160" y="496" width="16" height="12" rx="2" />
+      <circle cx="168" cy="502" r="3" fill="#1E293B" />
+      <rect x="240" y="496" width="16" height="12" rx="2" />
+      <circle cx="248" cy="502" r="3" fill="#1E293B" />
+      <rect x="320" y="496" width="16" height="12" rx="2" />
+      <circle cx="328" cy="502" r="3" fill="#1E293B" />
+    </g>
+  </g>
+
+  <!-- Heavy Cast-in-Place Structural Column Formwork & Rebar Cage -->
+  <g transform="translate(680, 240)">
+    <!-- Exposed High-Tensile Steel Rebar Cage -->
+    <rect x="40" y="0" width="140" height="420" fill="url(#rebarHatch)" stroke="#64748B" stroke-width="2" />
+    <!-- Vertical Rebar Rods -->
+    <g stroke="#94A3B8" stroke-width="3" stroke-linecap="round">
+      <line x1="45" y1="-30" x2="45" y2="420" />
+      <line x1="65" y1="-30" x2="65" y2="420" />
+      <line x1="85" y1="-30" x2="85" y2="420" />
+      <line x1="105" y1="-30" x2="105" y2="420" />
+      <line x1="125" y1="-30" x2="125" y2="420" />
+      <line x1="145" y1="-30" x2="145" y2="420" />
+      <line x1="165" y1="-30" x2="165" y2="420" />
+    </g>
+    <!-- Modular Formwork Shuttering Panels (Lower part being poured) -->
+    <rect x="30" y="160" width="160" height="260" fill="url(#steelNavy)" stroke="#162E47" stroke-width="3" rx="2" />
+    <!-- External Steel Strongback Ties & Alignment Braces -->
+    <g stroke="#B58B55" stroke-width="5" stroke-linecap="round">
+      <line x1="30" y1="210" x2="190" y2="210" />
+      <line x1="30" y1="270" x2="190" y2="270" />
+      <line x1="30" y1="330" x2="190" y2="330" />
+      <line x1="30" y1="390" x2="190" y2="390" />
+    </g>
+    <!-- Heavy-duty Diagonal Alignment Turnbuckle Braces Anchored into Pit -->
+    <line x1="30" y1="270" x2="-80" y2="460" stroke="#EA580C" stroke-width="6" stroke-linecap="round" />
+    <line x1="190" y1="270" x2="280" y2="460" stroke="#EA580C" stroke-width="6" stroke-linecap="round" />
+  </g>
+
+  <!-- Mobile Concrete Boom Pump Vehicle (Active Placement Operation) -->
+  <g transform="translate(480, 480) scale(0.9)">
+    <!-- Truck Cab & Chassis -->
+    <rect x="0" y="90" width="170" height="40" rx="4" fill="#234A70" stroke="#162E47" stroke-width="2" />
+    <circle cx="30" cy="130" r="14" fill="#0F172A" />
+    <circle cx="30" cy="130" r="6" fill="#94A3B8" />
+    <circle cx="110" cy="130" r="14" fill="#0F172A" />
+    <circle cx="110" cy="130" r="6" fill="#94A3B8" />
+    <circle cx="145" cy="130" r="14" fill="#0F172A" />
+    <circle cx="145" cy="130" r="6" fill="#94A3B8" />
+    <!-- Cab -->
+    <polygon points="120,90 165,90 165,55 140,55" fill="#234A70" />
+    <polygon points="125,85 160,85 160,60 142,60" fill="#93C5FD" opacity="0.8" />
+    <!-- Outrigger Stabilizer deployed -->
+    <line x1="40" y1="110" x2="10" y2="144" stroke="#EA580C" stroke-width="6" stroke-linecap="round" />
+    <rect x="0" y="142" width="20" height="6" fill="#1E293B" />
+    <!-- Articulated Concrete Placing Boom Reaching Upwards -->
+    <g stroke="#B58B55" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="60" y1="90" x2="110" y2="0" />
+      <line x1="110" y1="0" x2="200" y2="-90" />
+      <line x1="200" y1="-90" x2="260" y2="-170" />
+    </g>
+    <!-- Flexible Tremie Hose reaching into the formwork column -->
+    <path d="M 260 -170 C 275 -130, 270 -60, 270 -40" fill="none" stroke="#1E293B" stroke-width="6" stroke-linecap="round" />
+  </g>
+
+  <!-- Site Engineering & Quality Survey Inspection Station (Foreground Left) -->
+  <g transform="translate(140, 570)">
+    <!-- Tripod & Precision Total Station / Theodolite (Surveying Instrument) -->
+    <line x1="60" y1="50" x2="35" y2="135" stroke="#B58B55" stroke-width="4" stroke-linecap="round" />
+    <line x1="60" y1="50" x2="62" y2="135" stroke="#B58B55" stroke-width="4" stroke-linecap="round" />
+    <line x1="60" y1="50" x2="90" y2="135" stroke="#B58B55" stroke-width="4" stroke-linecap="round" />
+    <!-- Total Station Instrument Body -->
+    <rect x="48" y="24" width="24" height="28" rx="3" fill="#234A70" stroke="#142B42" stroke-width="2" />
+    <circle cx="60" cy="36" r="6" fill="#93C5FD" stroke="#60A5FA" stroke-width="1.5" />
+    <line x1="60" y1="20" x2="60" y2="24" stroke="#B58B55" stroke-width="2" />
+    <!-- Laser Alignment Sight Beam (Dotted Line to Benchmark) -->
+    <line x1="60" y1="36" x2="520" y2="-40" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="5 4" opacity="0.75" />
+
+    <!-- Site Engineer 1 (Looking Through Theodolite / Holding Digital Tablet) -->
+    <g transform="translate(0, 30)">
+      <circle cx="20" cy="18" r="8" fill="#F8FAFC" />
+      <!-- White Hardhat -->
+      <path d="M 10 16 Q 20 8 30 16 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2" />
+      <line x1="8" y1="16" x2="32" y2="16" stroke="#FFFFFF" stroke-width="2" />
+      <!-- High-Visibility Reflective Vest -->
+      <path d="M 12 28 L 28 28 L 30 65 L 10 65 Z" fill="#F59E0B" />
+      <line x1="16" y1="28" x2="16" y2="65" stroke="#FFFFFF" stroke-width="2" />
+      <line x1="24" y1="28" x2="24" y2="65" stroke="#FFFFFF" stroke-width="2" />
+      <!-- Navy Work Trousers & Safety Boots -->
+      <line x1="15" y1="65" x2="14" y2="105" stroke="#1E293B" stroke-width="4" />
+      <line x1="25" y1="65" x2="26" y2="105" stroke="#1E293B" stroke-width="4" />
+      <!-- Field Tablet -->
+      <rect x="25" y="40" width="18" height="13" rx="1.5" fill="#1E293B" stroke="#60A5FA" stroke-width="1" />
+    </g>
+
+    <!-- Site Engineer 2 / Quality Supervisor (Holding Technical Blueprints) -->
+    <g transform="translate(100, 35)">
+      <circle cx="20" cy="18" r="8" fill="#F8FAFC" />
+      <path d="M 10 16 Q 20 8 30 16 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2" />
+      <line x1="8" y1="16" x2="32" y2="16" stroke="#FFFFFF" stroke-width="2" />
+      <path d="M 12 28 L 28 28 L 30 65 L 10 65 Z" fill="#EA580C" />
+      <line x1="16" y1="28" x2="16" y2="65" stroke="#FFFFFF" stroke-width="2" />
+      <line x1="24" y1="28" x2="24" y2="65" stroke="#FFFFFF" stroke-width="2" />
+      <line x1="15" y1="65" x2="15" y2="105" stroke="#1E293B" stroke-width="4" />
+      <line x1="25" y1="65" x2="25" y2="105" stroke="#1E293B" stroke-width="4" />
+      <!-- Rolled Architectural Specification Drawing -->
+      <rect x="25" y="38" width="22" height="14" fill="#93C5FD" stroke="#2563EB" stroke-width="1" />
+      <line x1="28" y1="42" x2="44" y2="42" stroke="#1D4ED8" stroke-width="0.8" />
+      <line x1="28" y1="46" x2="40" y2="46" stroke="#1D4ED8" stroke-width="0.8" />
+    </g>
+  </g>
+
+  <!-- Technical Telemetry & Quality Benchmarks Overlay -->
+  <g opacity="0.85" font-family="'Courier New', monospace" font-size="11" fill="#234A70">
+    <!-- Grade Elevation Benchmark -->
+    <circle cx="1060" cy="620" r="16" fill="#FFFFFF" stroke="#B58B55" stroke-width="2" />
+    <circle cx="1060" cy="620" r="3" fill="#B58B55" />
+    <line x1="1036" y1="620" x2="1084" y2="620" stroke="#B58B55" stroke-width="1.5" />
+    <line x1="1060" y1="596" x2="1060" y2="644" stroke="#B58B55" stroke-width="1.5" />
+  </g>
+</svg>
+

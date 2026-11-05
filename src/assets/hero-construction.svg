@@ -1,0 +1,283 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E2EBF4" />
+      <stop offset="60%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#E5EDF5" />
+    </linearGradient>
+    <linearGradient id="buildingGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#234A70" />
+      <stop offset="100%" stop-color="#162E47" />
+    </linearGradient>
+    <linearGradient id="buildingGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#355D85" />
+      <stop offset="100%" stop-color="#223E5B" />
+    </linearGradient>
+    <linearGradient id="concreteGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D9DFE5" />
+      <stop offset="100%" stop-color="#B8C2CC" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B58B55" />
+      <stop offset="100%" stop-color="#D8AF78" />
+    </linearGradient>
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#234A70" stroke-width="0.75" stroke-opacity="0.12" />
+    </pattern>
+    <pattern id="scaffoldGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 0 0 L 20 20 M 20 0 L 0 20 M 0 0 L 20 0 L 20 20 L 0 20 Z" fill="none" stroke="#B58B55" stroke-width="0.8" stroke-opacity="0.35" />
+    </pattern>
+  </defs>
+
+  <!-- Sky & Ambient Background -->
+  <rect width="1200" height="900" fill="url(#skyGrad)" />
+  <rect width="1200" height="900" fill="url(#gridPattern)" />
+
+  <!-- Distant Atmospheric Skyline Silhouette -->
+  <g opacity="0.25" fill="#5A7188">
+    <rect x="80" y="380" width="70" height="420" />
+    <rect x="170" y="320" width="90" height="480" />
+    <polygon points="170,320 215,260 260,320" />
+    <rect x="290" y="410" width="80" height="390" />
+    <rect x="400" y="340" width="110" height="460" />
+    <rect x="840" y="360" width="95" height="440" />
+    <rect x="960" y="310" width="85" height="490" />
+    <polygon points="960,310 1002,240 1045,310" />
+    <rect x="1070" y="390" width="75" height="410" />
+  </g>
+
+  <!-- Tower Crane 1 (Left - Major Construction Crane) -->
+  <g stroke="#234A70" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Mast Vertical Tower -->
+    <line x1="280" y1="140" x2="280" y2="700" stroke-width="6" />
+    <line x1="310" y1="140" x2="310" y2="700" stroke-width="6" />
+    <!-- Mast Bracing X-bars -->
+    <path d="
+      M 280 140 L 310 170 M 310 140 L 280 170
+      M 280 170 L 310 200 M 310 170 L 280 200
+      M 280 200 L 310 230 M 310 200 L 280 230
+      M 280 230 L 310 260 M 310 230 L 280 260
+      M 280 260 L 310 290 M 310 260 L 280 290
+      M 280 290 L 310 320 M 310 290 L 280 320
+      M 280 320 L 310 350 M 310 320 L 280 350
+      M 280 350 L 310 380 M 310 350 L 280 380
+      M 280 380 L 310 410 M 310 380 L 280 410
+      M 280 410 L 310 440 M 310 410 L 280 440
+      M 280 440 L 310 470 M 310 440 L 280 470
+      M 280 470 L 310 500 M 310 470 L 280 500
+      M 280 500 L 310 530 M 310 500 L 280 530
+      M 280 530 L 310 560 M 310 530 L 280 560
+      M 280 560 L 310 590 M 310 560 L 280 590
+      M 280 590 L 310 620 M 310 590 L 280 620
+      M 280 620 L 310 650 M 310 620 L 280 650
+      M 280 650 L 310 680 M 310 650 L 280 680
+    " stroke-width="2.5" stroke="#234A70" opacity="0.85" />
+
+    <!-- Crane Operator Cabin & Peak -->
+    <rect x="272" y="115" width="48" height="26" fill="#B58B55" stroke="#8E6A3B" stroke-width="2" />
+    <polygon points="295,45 275,115 315,115" fill="#234A70" stroke="#162E47" stroke-width="2" />
+
+    <!-- Counter-jib (Left side) -->
+    <line x1="295" y1="115" x2="130" y2="115" stroke-width="5" />
+    <line x1="295" y1="45" x2="140" y2="115" stroke-width="2.5" stroke="#B58B55" />
+    <rect x="140" y="105" width="40" height="25" fill="#183552" stroke="#234A70" />
+
+    <!-- Working Jib (Right arm reaching across site) -->
+    <line x1="295" y1="115" x2="720" y2="115" stroke-width="5" />
+    <line x1="295" y1="45" x2="480" y2="115" stroke-width="2.5" stroke="#B58B55" />
+    <line x1="295" y1="45" x2="660" y2="115" stroke-width="2" stroke="#B58B55" />
+    <!-- Jib Truss Lattice -->
+    <path d="
+      M 295 115 L 330 95 L 365 115 L 400 95 L 435 115 L 470 95 L 505 115 L 540 95 L 575 115 L 610 95 L 645 115 L 680 95 L 715 115
+    " stroke-width="2" stroke="#234A70" />
+    <line x1="330" y1="95" x2="715" y2="95" stroke-width="3" />
+
+    <!-- Hoist Trolley, Cable & Concrete Beam Payload -->
+    <rect x="525" y="112" width="22" height="10" fill="#B58B55" />
+    <line x1="536" y1="122" x2="536" y2="280" stroke="#183552" stroke-width="2" stroke-dasharray="6 3" />
+    <!-- Hook Block -->
+    <circle cx="536" cy="285" r="5" fill="#234A70" />
+    <!-- Rigging Slings -->
+    <line x1="536" y1="288" x2="495" y2="320" stroke="#B58B55" stroke-width="2" />
+    <line x1="536" y1="288" x2="577" y2="320" stroke="#B58B55" stroke-width="2" />
+    <!-- Prefab Concrete Beam in Suspension -->
+    <rect x="475" y="320" width="122" height="22" rx="3" fill="#E2E8F0" stroke="#234A70" stroke-width="2.5" />
+    <line x1="475" y1="331" x2="597" y2="331" stroke="#94A3B8" stroke-width="1.5" />
+  </g>
+
+  <!-- Central Primary Reinforced Concrete Building Under Construction -->
+  <g>
+    <!-- Solid Concrete Core -->
+    <rect x="460" y="360" width="360" height="420" fill="url(#buildingGrad1)" rx="4" />
+    
+    <!-- Building Structural Columns & Floor Slabs -->
+    <g fill="none" stroke="#D1D9E0" stroke-width="5">
+      <!-- Horizontal Floor Decks -->
+      <line x1="450" y1="410" x2="830" y2="410" stroke="#E2E8F0" stroke-width="8" />
+      <line x1="450" y1="470" x2="830" y2="470" stroke="#E2E8F0" stroke-width="8" />
+      <line x1="450" y1="530" x2="830" y2="530" stroke="#E2E8F0" stroke-width="8" />
+      <line x1="450" y1="590" x2="830" y2="590" stroke="#E2E8F0" stroke-width="8" />
+      <line x1="450" y1="650" x2="830" y2="650" stroke="#E2E8F0" stroke-width="8" />
+      <line x1="450" y1="710" x2="830" y2="710" stroke="#E2E8F0" stroke-width="8" />
+
+      <!-- Vertical Heavy Load Columns -->
+      <line x1="470" y1="360" x2="470" y2="780" stroke-width="10" stroke="#F1F5F9" />
+      <line x1="535" y1="360" x2="535" y2="780" stroke-width="8" stroke="#F1F5F9" />
+      <line x1="600" y1="360" x2="600" y2="780" stroke-width="8" stroke="#F1F5F9" />
+      <line x1="665" y1="360" x2="665" y2="780" stroke-width="8" stroke="#F1F5F9" />
+      <line x1="730" y1="360" x2="730" y2="780" stroke-width="8" stroke="#F1F5F9" />
+      <line x1="810" y1="360" x2="810" y2="780" stroke-width="10" stroke="#F1F5F9" />
+    </g>
+
+    <!-- Glazed Modern Facade Paneling (Lower completed floors) -->
+    <g fill="#60A5FA" fill-opacity="0.28" stroke="#93C5FD" stroke-width="1.5">
+      <!-- Floor 1 Panels -->
+      <rect x="480" y="660" width="45" height="42" />
+      <rect x="545" y="660" width="45" height="42" />
+      <rect x="610" y="660" width="45" height="42" />
+      <rect x="675" y="660" width="45" height="42" />
+      <rect x="740" y="660" width="60" height="42" />
+      <!-- Floor 2 Panels -->
+      <rect x="480" y="600" width="45" height="42" />
+      <rect x="545" y="600" width="45" height="42" />
+      <rect x="610" y="600" width="45" height="42" />
+      <rect x="675" y="600" width="45" height="42" />
+      <rect x="740" y="600" width="60" height="42" />
+      <!-- Floor 3 Panels -->
+      <rect x="480" y="540" width="45" height="42" />
+      <rect x="545" y="540" width="45" height="42" />
+      <rect x="610" y="540" width="45" height="42" />
+      <rect x="675" y="540" width="45" height="42" />
+      <rect x="740" y="540" width="60" height="42" />
+    </g>
+
+    <!-- Rebar Columns Extending Upward on Rooftop -->
+    <g stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round">
+      <line x1="468" y1="360" x2="468" y2="310" />
+      <line x1="472" y1="360" x2="472" y2="315" />
+      <line x1="533" y1="360" x2="533" y2="315" />
+      <line x1="537" y1="360" x2="537" y2="310" />
+      <line x1="598" y1="360" x2="598" y2="315" />
+      <line x1="602" y1="360" x2="602" y2="310" />
+      <line x1="663" y1="360" x2="663" y2="315" />
+      <line x1="667" y1="360" x2="667" y2="310" />
+      <line x1="728" y1="360" x2="728" y2="315" />
+      <line x1="732" y1="360" x2="732" y2="310" />
+      <line x1="808" y1="360" x2="808" y2="310" />
+      <line x1="812" y1="360" x2="812" y2="315" />
+    </g>
+
+    <!-- Top Floor Scaffold Mesh & Protection Barrier -->
+    <rect x="450" y="415" width="375" height="110" fill="url(#scaffoldGrid)" />
+    <!-- Safety Orange Barrier Railing -->
+    <line x1="450" y1="412" x2="825" y2="412" stroke="#EA580C" stroke-width="3.5" />
+    <line x1="450" y1="472" x2="825" y2="472" stroke="#EA580C" stroke-width="3" />
+  </g>
+
+  <!-- Right Secondary Commercial Structure Frame -->
+  <g>
+    <rect x="850" y="440" width="260" height="340" fill="url(#buildingGrad2)" rx="3" />
+    <g stroke="#94A3B8" stroke-width="4">
+      <line x1="840" y1="500" x2="1115" y2="500" />
+      <line x1="840" y1="560" x2="1115" y2="560" />
+      <line x1="840" y1="620" x2="1115" y2="620" />
+      <line x1="840" y1="680" x2="1115" y2="680" />
+      <line x1="915" y1="440" x2="915" y2="780" />
+      <line x1="990" y1="440" x2="990" y2="780" />
+      <line x1="1065" y1="440" x2="1065" y2="780" />
+    </g>
+    <!-- Tower Crane 2 on Right -->
+    <line x1="1020" y1="200" x2="1020" y2="440" stroke="#B58B55" stroke-width="4" />
+    <line x1="1020" y1="180" x2="1140" y2="180" stroke="#B58B55" stroke-width="3" />
+    <line x1="1020" y1="180" x2="950" y2="180" stroke="#B58B55" stroke-width="3" />
+    <line x1="1020" y1="150" x2="1100" y2="180" stroke="#234A70" stroke-width="1.5" />
+  </g>
+
+  <!-- Ground Level Civil Works / Earthmoving / Highway Pavement -->
+  <g>
+    <!-- Ground Base Slab -->
+    <polygon points="0,780 1200,740 1200,900 0,900" fill="url(#concreteGrad)" />
+    <!-- Asphalt Road Grade Section -->
+    <polygon points="0,820 1200,780 1200,900 0,900" fill="#334155" />
+    <!-- Road Lane Markings -->
+    <line x1="80" y1="850" x2="220" y2="845" stroke="#FFFFFF" stroke-width="4" stroke-dasharray="25 15" />
+    <line x1="300" y1="842" x2="520" y2="835" stroke="#FFFFFF" stroke-width="4" stroke-dasharray="25 15" />
+    <line x1="600" y1="832" x2="850" y2="823" stroke="#FFFFFF" stroke-width="4" stroke-dasharray="25 15" />
+    <line x1="920" y1="820" x2="1180" y2="810" stroke="#FFFFFF" stroke-width="4" stroke-dasharray="25 15" />
+
+    <!-- Civil Perimeter Concrete Security Barriers (Jersey Barriers) -->
+    <g fill="#CBD5E1" stroke="#64748B" stroke-width="1.5">
+      <polygon points="120,775 180,773 180,795 115,797" />
+      <polygon points="185,773 245,771 245,793 180,795" />
+      <polygon points="250,771 310,769 310,791 245,793" />
+      <polygon points="315,769 375,767 375,789 310,791" />
+      <polygon points="380,767 440,765 440,787 375,789" />
+    </g>
+  </g>
+
+  <!-- Hydraulic Excavator / Earthmoving Equipment on Left -->
+  <g transform="translate(190, 705) scale(0.85)">
+    <!-- Crawler Tracks -->
+    <rect x="0" y="60" width="130" height="28" rx="8" fill="#1E293B" stroke="#0F172A" stroke-width="2" />
+    <circle cx="18" cy="74" r="8" fill="#475569" />
+    <circle cx="45" cy="74" r="7" fill="#475569" />
+    <circle cx="72" cy="74" r="7" fill="#475569" />
+    <circle cx="99" cy="74" r="7" fill="#475569" />
+    <circle cx="112" cy="74" r="8" fill="#475569" />
+    <!-- Excavator Body Cab -->
+    <rect x="15" y="24" width="70" height="40" rx="5" fill="#B58B55" stroke="#8E6A3B" stroke-width="2" />
+    <rect x="52" y="28" width="28" height="22" rx="2" fill="#E0F2FE" stroke="#38BDF8" stroke-width="1.5" />
+    <!-- Counterweight -->
+    <rect x="10" y="32" width="18" height="32" rx="3" fill="#1E293B" />
+    <!-- Articulated Boom & Arm -->
+    <line x1="75" y1="42" x2="135" y2="0" stroke="#B58B55" stroke-width="10" stroke-linecap="round" />
+    <circle cx="135" cy="0" r="5" fill="#1E293B" />
+    <line x1="135" y1="0" x2="185" y2="45" stroke="#B58B55" stroke-width="8" stroke-linecap="round" />
+    <circle cx="185" cy="45" r="4" fill="#1E293B" />
+    <!-- Bucket -->
+    <path d="M 185 45 L 205 60 L 195 80 L 175 68 Z" fill="#334155" stroke="#0F172A" stroke-width="2" />
+    <!-- Hydraulic Cylinder -->
+    <line x1="82" y1="36" x2="115" y2="12" stroke="#64748B" stroke-width="4" />
+  </g>
+
+  <!-- Site Personnel / Engineers in Safety Gear & White Helmets -->
+  <g transform="translate(380, 715)">
+    <!-- Engineer 1 (Holding Plans / Blueprint) -->
+    <circle cx="20" cy="12" r="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5" />
+    <!-- White Hardhat -->
+    <path d="M 14 10 Q 20 5 26 10 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+    <!-- High-Vis Vest -->
+    <rect x="15" y="18" width="10" height="18" fill="#F59E0B" />
+    <line x1="17" y1="18" x2="17" y2="36" stroke="#FFFFFF" stroke-width="1.5" />
+    <line x1="23" y1="18" x2="23" y2="36" stroke="#FFFFFF" stroke-width="1.5" />
+    <!-- Legs -->
+    <line x1="17" y1="36" x2="16" y2="52" stroke="#1E293B" stroke-width="2.5" />
+    <line x1="23" y1="36" x2="24" y2="52" stroke="#1E293B" stroke-width="2.5" />
+    <!-- Blueprint Sheet in Hands -->
+    <rect x="23" y="24" width="14" height="9" fill="#93C5FD" stroke="#2563EB" stroke-width="0.8" />
+  </g>
+
+  <g transform="translate(420, 718)">
+    <!-- Engineer 2 (Safety Officer / Supervisor) -->
+    <circle cx="20" cy="12" r="5" fill="#F8FAFC" />
+    <path d="M 14 10 Q 20 5 26 10 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+    <rect x="15" y="18" width="10" height="18" fill="#EA580C" />
+    <line x1="17" y1="18" x2="17" y2="36" stroke="#FFFFFF" stroke-width="1.5" />
+    <line x1="23" y1="18" x2="23" y2="36" stroke="#FFFFFF" stroke-width="1.5" />
+    <line x1="17" y1="36" x2="17" y2="50" stroke="#1E293B" stroke-width="2.5" />
+    <line x1="23" y1="36" x2="23" y2="50" stroke="#1E293B" stroke-width="2.5" />
+  </g>
+
+  <!-- Technical Overlay HUD / Engineering Dimensions & Grid Coordinates -->
+  <g opacity="0.65" font-family="'Courier New', monospace" font-size="11" fill="#234A70">
+    <line x1="460" y1="340" x2="820" y2="340" stroke="#234A70" stroke-width="1" stroke-dasharray="4 4" />
+    <line x1="460" y1="335" x2="460" y2="345" stroke="#234A70" stroke-width="1.5" />
+    <line x1="820" y1="335" x2="820" y2="345" stroke="#234A70" stroke-width="1.5" />
+    <!-- Geotechnical Benchmark Markings -->
+    <circle cx="820" cy="740" r="14" fill="none" stroke="#B58B55" stroke-width="2" />
+    <circle cx="820" cy="740" r="2" fill="#B58B55" />
+    <line x1="800" y1="740" x2="840" y2="740" stroke="#B58B55" stroke-width="1" />
+    <line x1="820" y1="720" x2="820" y2="760" stroke="#B58B55" stroke-width="1" />
+  </g>
+</svg>
+

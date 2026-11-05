@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DCE6F0" />
+      <stop offset="50%" stop-color="#EDF3F8" />
+      <stop offset="100%" stop-color="#E2EAF2" />
+    </linearGradient>
+    <linearGradient id="civicBuilding" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#234A70" />
+      <stop offset="100%" stop-color="#142C44" />
+    </linearGradient>
+    <linearGradient id="civicGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93C5FD" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0.95" />
+    </linearGradient>
+    <linearGradient id="culvertConcrete" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CBD5E1" />
+      <stop offset="50%" stop-color="#94A3B8" />
+      <stop offset="100%" stop-color="#64748B" />
+    </linearGradient>
+    <linearGradient id="pavingGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E2E8F0" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </linearGradient>
+    <pattern id="civicGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#234A70" stroke-width="0.5" stroke-opacity="0.12" />
+    </pattern>
+    <pattern id="plazaPavers" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect width="16" height="16" fill="none" stroke="#94A3B8" stroke-width="0.6" stroke-opacity="0.5" />
+    </pattern>
+  </defs>
+
+  <!-- Sky & Horizon -->
+  <rect width="800" height="500" fill="url(#skyGrad)" />
+  <rect width="800" height="500" fill="url(#civicGrid)" />
+
+  <!-- Background Urban Horizon & Municipal Administrative Skyline -->
+  <g opacity="0.3" fill="#64748B">
+    <rect x="40" y="140" width="60" height="240" />
+    <rect x="120" y="110" width="80" height="270" />
+    <polygon points="120,110 160,70 200,110" />
+    <rect x="220" y="150" width="70" height="230" />
+    <rect x="620" y="120" width="75" height="260" />
+    <rect x="710" y="140" width="65" height="240" />
+  </g>
+
+  <!-- Central Civic Administrative Building (Modern Public Complex) -->
+  <g transform="translate(180, 80)">
+    <!-- Main Structure Block -->
+    <rect x="0" y="50" width="440" height="250" fill="url(#civicBuilding)" rx="4" />
+    
+    <!-- Colonaded Portico / Municipal Entry Façade -->
+    <g fill="none" stroke="#F1F5F9" stroke-width="6">
+      <line x1="20" y1="50" x2="20" y2="300" />
+      <line x1="75" y1="50" x2="75" y2="300" />
+      <line x1="130" y1="50" x2="130" y2="300" />
+      <line x1="185" y1="50" x2="185" y2="300" />
+      <line x1="255" y1="50" x2="255" y2="300" />
+      <line x1="310" y1="50" x2="310" y2="300" />
+      <line x1="365" y1="50" x2="365" y2="300" />
+      <line x1="420" y1="50" x2="420" y2="300" />
+      <!-- Floor Bands -->
+      <line x1="0" y1="110" x2="440" y2="110" stroke-width="4" stroke="#CBD5E1" />
+      <line x1="0" y1="170" x2="440" y2="170" stroke-width="4" stroke="#CBD5E1" />
+      <line x1="0" y1="230" x2="440" y2="230" stroke-width="4" stroke="#CBD5E1" />
+    </g>
+
+    <!-- Energy-Efficient Glazed Windows -->
+    <g fill="url(#civicGlass)" opacity="0.6">
+      <!-- Floor 3 -->
+      <rect x="30" y="65" width="35" height="35" rx="2" />
+      <rect x="85" y="65" width="35" height="35" rx="2" />
+      <rect x="140" y="65" width="35" height="35" rx="2" />
+      <rect x="265" y="65" width="35" height="35" rx="2" />
+      <rect x="320" y="65" width="35" height="35" rx="2" />
+      <rect x="375" y="65" width="35" height="35" rx="2" />
+      <!-- Floor 2 -->
+      <rect x="30" y="125" width="35" height="35" rx="2" />
+      <rect x="85" y="125" width="35" height="35" rx="2" />
+      <rect x="140" y="125" width="35" height="35" rx="2" />
+      <rect x="265" y="125" width="35" height="35" rx="2" />
+      <rect x="320" y="125" width="35" height="35" rx="2" />
+      <rect x="375" y="125" width="35" height="35" rx="2" />
+      <!-- Floor 1 -->
+      <rect x="30" y="185" width="35" height="35" rx="2" />
+      <rect x="85" y="185" width="35" height="35" rx="2" />
+      <rect x="140" y="185" width="35" height="35" rx="2" />
+      <rect x="265" y="185" width="35" height="35" rx="2" />
+      <rect x="320" y="185" width="35" height="35" rx="2" />
+      <rect x="375" y="185" width="35" height="35" rx="2" />
+    </g>
+
+    <!-- Classical Atrium Cornice Pediment with Gold Accent -->
+    <polygon points="170,50 220,10 270,50" fill="#234A70" stroke="#B58B55" stroke-width="2.5" />
+    <circle cx="220" cy="34" r="6" fill="#B58B55" />
+    <!-- Entry Glass Grand Portal -->
+    <rect x="195" y="235" width="50" height="65" fill="#E0F2FE" stroke="#B58B55" stroke-width="2" />
+    <line x1="220" y1="235" x2="220" y2="300" stroke="#234A70" stroke-width="1.5" />
+  </g>
+
+  <!-- Broad Civic Public Concourse & Stone Paved Plaza -->
+  <g>
+    <!-- Stepped Plaza Base -->
+    <polygon points="0,370 800,370 800,500 0,500" fill="url(#pavingGrad)" />
+    <!-- Paver Pattern Overlay -->
+    <polygon points="0,370 800,370 800,500 0,500" fill="url(#plazaPavers)" />
+
+    <!-- Civic Fountain & Integrated Stormwater Retention Reflecting Pool -->
+    <g transform="translate(420, 385)">
+      <!-- Symmetrical Pool Basin -->
+      <ellipse cx="140" cy="45" rx="130" ry="32" fill="#0369A1" stroke="#CBD5E1" stroke-width="4" />
+      <ellipse cx="140" cy="45" rx="122" ry="26" fill="url(#waterGrad)" />
+      <!-- Water Jets / Flow -->
+      <path d="M 140 45 C 130 15, 120 15, 110 42" stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.9" />
+      <path d="M 140 45 C 150 15, 160 15, 170 42" stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.9" />
+      <circle cx="140" cy="45" r="4" fill="#B58B55" />
+    </g>
+  </g>
+
+  <!-- Large-Scale Subsurface Municipal Stormwater Trunk Line & Concrete Box Culvert (Cutaway View Left) -->
+  <g transform="translate(40, 350)">
+    <!-- Precast Reinforced Concrete Box Culvert Cell 1 -->
+    <rect x="0" y="30" width="130" height="95" rx="4" fill="url(#culvertConcrete)" stroke="#334155" stroke-width="3" />
+    <rect x="12" y="42" width="106" height="71" rx="2" fill="#0F172A" />
+    <!-- Water Flow Line in Box Culvert -->
+    <path d="M 12 85 Q 65 78 118 85 L 118 113 L 12 113 Z" fill="url(#waterGrad)" />
+    <!-- Precast Joint Ribs -->
+    <line x1="3" y1="30" x2="3" y2="125" stroke="#E2E8F0" stroke-width="2" />
+    <line x1="127" y1="30" x2="127" y2="125" stroke="#E2E8F0" stroke-width="2" />
+
+    <!-- Precast Reinforced Concrete Box Culvert Cell 2 (Twin Barrel System) -->
+    <rect x="140" y="30" width="130" height="95" rx="4" fill="url(#culvertConcrete)" stroke="#334155" stroke-width="3" />
+    <rect x="152" y="42" width="106" height="71" rx="2" fill="#0F172A" />
+    <path d="M 152 85 Q 205 78 258 85 L 258 113 L 152 113 Z" fill="url(#waterGrad)" />
+    <line x1="143" y1="30" x2="143" y2="125" stroke="#E2E8F0" stroke-width="2" />
+    <line x1="267" y1="30" x2="267" y2="125" stroke="#E2E8F0" stroke-width="2" />
+
+    <!-- Heavy Cast Ductile Iron Drainage Grate on Surface -->
+    <g transform="translate(70, 10)">
+      <rect x="0" y="0" width="75" height="15" fill="#1E293B" stroke="#64748B" stroke-width="1.5" />
+      <line x1="10" y1="2" x2="10" y2="13" stroke="#94A3B8" stroke-width="2" />
+      <line x1="20" y1="2" x2="20" y2="13" stroke="#94A3B8" stroke-width="2" />
+      <line x1="30" y1="2" x2="30" y2="13" stroke="#94A3B8" stroke-width="2" />
+      <line x1="40" y1="2" x2="40" y2="13" stroke="#94A3B8" stroke-width="2" />
+      <line x1="50" y1="2" x2="50" y2="13" stroke="#94A3B8" stroke-width="2" />
+      <line x1="60" y1="2" x2="60" y2="13" stroke="#94A3B8" stroke-width="2" />
+    </g>
+  </g>
+
+  <!-- Modern Urban Streetlight / Public Utilities Poles -->
+  <g stroke="#234A70" stroke-width="2.5" fill="none">
+    <!-- Lamp 1 (Left Plaza) -->
+    <path d="M 330 380 L 330 290 Q 330 270 350 270" />
+    <circle cx="352" cy="272" r="3" fill="#B58B55" stroke="none" />
+    <!-- Lamp 2 (Right Plaza) -->
+    <path d="M 720 380 L 720 290 Q 720 270 700 270" />
+    <circle cx="698" cy="272" r="3" fill="#B58B55" stroke="none" />
+  </g>
+
+  <!-- Civil / Municipal Field Supervision Engineers -->
+  <g transform="translate(340, 360)">
+    <!-- Municipal Inspector 1 -->
+    <circle cx="16" cy="12" r="5" fill="#F8FAFC" />
+    <path d="M 11 10 Q 16 5 21 10 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+    <rect x="12" y="17" width="8" height="15" fill="#F59E0B" />
+    <line x1="14" y1="32" x2="13" y2="48" stroke="#1E293B" stroke-width="2.5" />
+    <line x1="18" y1="32" x2="19" y2="48" stroke="#1E293B" stroke-width="2.5" />
+    <rect x="18" y="22" width="10" height="7" fill="#93C5FD" stroke="#2563EB" stroke-width="0.7" />
+
+    <!-- Municipal Inspector 2 -->
+    <g transform="translate(25, 3)">
+      <circle cx="16" cy="12" r="5" fill="#F8FAFC" />
+      <path d="M 11 10 Q 16 5 21 10 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+      <rect x="12" y="17" width="8" height="15" fill="#234A70" />
+      <line x1="14" y1="32" x2="14" y2="46" stroke="#1E293B" stroke-width="2.5" />
+      <line x1="18" y1="32" x2="18" y2="46" stroke="#1E293B" stroke-width="2.5" />
+    </g>
+  </g>
+</svg>
+

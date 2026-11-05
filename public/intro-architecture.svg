@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D4660" />
+      <stop offset="40%" stop-color="#5B7692" />
+      <stop offset="80%" stop-color="#C5BDB0" />
+      <stop offset="100%" stop-color="#EAE6DF" />
+    </linearGradient>
+
+    <linearGradient id="stoneFacade" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF9F6" />
+      <stop offset="60%" stop-color="#EAE6DF" />
+      <stop offset="100%" stop-color="#C5BFB5" />
+    </linearGradient>
+
+    <linearGradient id="darkMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#142D45" />
+      <stop offset="100%" stop-color="#0B1B2B" />
+    </linearGradient>
+
+    <linearGradient id="bronzeFrame" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D4B07B" />
+      <stop offset="50%" stop-color="#B18A58" />
+      <stop offset="100%" stop-color="#7C5D33" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="800" fill="url(#skyGrad)" />
+
+  <g opacity="0.35" fill="#4B6075">
+    <rect x="60" y="240" width="140" height="460" />
+    <rect x="240" y="180" width="160" height="520" />
+    <polygon points="240,180 320,110 400,180" />
+    <rect x="720" y="220" width="180" height="480" />
+  </g>
+
+  <g transform="translate(180, 140)">
+    <rect x="0" y="60" width="640" height="550" fill="url(#stoneFacade)" stroke="#142D45" stroke-width="3" rx="2" />
+
+    <g fill="url(#darkMetal)">
+      <rect x="40" y="100" width="90" height="480" rx="4" />
+      <rect x="180" y="100" width="90" height="480" rx="4" />
+      <rect x="320" y="80" width="120" height="500" rx="4" />
+      <rect x="490" y="100" width="90" height="480" rx="4" />
+    </g>
+
+    <g stroke="url(#bronzeFrame)" stroke-width="2.5" opacity="0.85">
+      <line x1="0" y1="180" x2="640" y2="180" stroke-width="6" stroke="#B18A58" />
+      <line x1="0" y1="300" x2="640" y2="300" stroke-width="6" stroke="#B18A58" />
+      <line x1="0" y1="420" x2="640" y2="420" stroke-width="6" stroke="#B18A58" />
+
+      <line x1="85" y1="100" x2="85" y2="580" />
+      <line x1="225" y1="100" x2="225" y2="580" />
+      <line x1="360" y1="80" x2="360" y2="580" />
+      <line x1="400" y1="80" x2="400" y2="580" />
+      <line x1="535" y1="100" x2="535" y2="580" />
+    </g>
+
+    <polygon points="-30,60 670,60 640,20 0,20" fill="#142D45" stroke="#B18A58" stroke-width="3" />
+    <line x1="-30" y1="60" x2="670" y2="60" stroke="#FAF9F6" stroke-width="3" />
+
+    <g transform="translate(480, 500)">
+      <line x1="30" y1="40" x2="15" y2="95" stroke="#B18A58" stroke-width="3" />
+      <line x1="30" y1="40" x2="45" y2="95" stroke="#B18A58" stroke-width="3" />
+      <rect x="22" y="24" width="16" height="18" fill="#142D45" />
+      <circle cx="2" cy="30" r="7" fill="#FAF9F6" />
+      <path d="M -5 27 Q 2 20 9 27 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" />
+      <rect x="-2" y="37" width="8" height="24" fill="#B18A58" />
+      <line x1="0" y1="61" x2="-1" y2="95" stroke="#142D45" stroke-width="3" />
+      <line x1="4" y1="61" x2="5" y2="95" stroke="#142D45" stroke-width="3" />
+    </g>
+  </g>
+
+  <polygon points="0,690 1000,690 1000,800 0,800" fill="#EAE6DF" />
+  <line x1="0" y1="690" x2="1000" y2="690" stroke="#B18A58" stroke-width="3" />
+</svg>
+
