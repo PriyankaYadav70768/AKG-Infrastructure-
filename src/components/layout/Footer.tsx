@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, ArrowRight, Shield } from 'lucide-react';
+import { Mail, Phone, MapPin, Shield } from 'lucide-react';
 import { Container } from '../common/Container';
 import { Logo } from '../common/Logo';
 import { NAVIGATION_ITEMS, EXPERTISE_LIST } from '../../data/content';
@@ -43,15 +43,6 @@ export const Footer: React.FC = () => {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  to="/login"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#D4B07B] hover:text-white transition-colors pt-1"
-                >
-                  <span>Portal Login / Join</span>
-                  <ArrowRight className="w-3 h-3" />
-                </Link>
-              </li>
             </ul>
           </div>
 
