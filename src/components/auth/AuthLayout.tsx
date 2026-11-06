@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Shield, CheckCircle2, Building2, HardHat, Compass } from 'lucide-react';
-import { Logo } from '../common/Logo';
-import { ThemeToggle } from '../common/ThemeToggle';
+import { Shield, CheckCircle2, Building2, HardHat, Compass } from 'lucide-react';
 import { LoginForm } from './LoginForm';
 import { JoinForm } from './JoinForm';
 import { ForgotPasswordModal } from './ForgotPasswordModal';
@@ -14,24 +12,7 @@ export const AuthLayout: React.FC = () => {
   const [isForgotModalOpen, setIsForgotModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#FAF9F6] dark:bg-[#0A121E] text-[#1F242A] dark:text-[#E6EAF0] flex flex-col transition-colors duration-200">
-      {/* Top subtle navigation bar */}
-      <div className="border-b border-[#E8E6E1] dark:border-[#1E293B] bg-[#FFFFFF] dark:bg-[#0D1826] py-3.5 px-4 sm:px-8">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Logo />
-          <div className="flex items-center gap-3">
-            <ThemeToggle />
-            <Link
-              to="/"
-              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#777C80] dark:text-[#94A3B8] hover:text-[#142D45] dark:hover:text-[#FAF9F6] transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              <span>Return to Website</span>
-            </Link>
-          </div>
-        </div>
-      </div>
-
+    <div className="flex-1 flex flex-col transition-colors duration-200">
       {/* Main Two-Column Auth Container */}
       <div className="flex-1 flex items-stretch">
         <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 min-h-full">

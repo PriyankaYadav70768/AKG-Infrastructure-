@@ -25,15 +25,15 @@ const ScrollToTop = () => {
   return null;
 };
 
-// Layout wrapper conditionally displaying standard header/footer
+// Layout wrapper displaying standard header, and conditional footer
 const AppLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const location = useLocation();
   const isAuthPage = location.pathname === '/login';
 
   return (
     <div className="flex flex-col min-h-screen bg-[#FAF9F6] dark:bg-[#0A121E] text-[#1F242A] dark:text-[#E6EAF0] transition-colors duration-200">
-      {!isAuthPage && <Header />}
-      <main className="flex-grow">{children}</main>
+      <Header />
+      <main className="flex-grow flex flex-col">{children}</main>
       {!isAuthPage && <Footer />}
     </div>
   );
