@@ -14,6 +14,13 @@ import {
 
 // SECTION 01 — FULL-SCREEN CINEMATIC HERO (75-90% Viewport Height)
 export const Hero: React.FC = () => {
+  const handleScrollDown = () => {
+    const nextSection = document.getElementById('intro-section');
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section className="relative min-h-[85vh] lg:min-h-[88vh] flex flex-col justify-between overflow-hidden bg-[#142D45] text-white">
       {/* Background Large-Scale Photographic Composition */}
@@ -70,9 +77,16 @@ export const Hero: React.FC = () => {
       </Container>
 
       {/* Small Scroll Indicator near bottom */}
-      <div className="relative z-10 pb-8 flex items-center justify-center gap-2 text-xs text-[#D4B07B] uppercase tracking-[0.2em] font-sans">
-        <span>Scroll Down</span>
-        <ChevronDown className="w-3.5 h-3.5 animate-bounce" />
+      <div className="relative z-10 pb-8 flex items-center justify-center">
+        <button
+          type="button"
+          onClick={handleScrollDown}
+          className="inline-flex items-center gap-2 text-xs text-[#D4B07B] hover:text-[#FAF9F6] uppercase tracking-[0.2em] font-sans transition-colors cursor-pointer group focus:outline-hidden"
+          aria-label="Scroll down to company introduction"
+        >
+          <span>Scroll Down</span>
+          <ChevronDown className="w-3.5 h-3.5 animate-bounce group-hover:translate-y-0.5 transition-transform" />
+        </button>
       </div>
     </section>
   );
@@ -81,7 +95,7 @@ export const Hero: React.FC = () => {
 // SECTION 02 — EDITORIAL COMPANY INTRODUCTION
 export const EditorialIntroSection: React.FC = () => {
   return (
-    <section className="py-28 lg:py-36 bg-[#FAF9F6] dark:bg-[#0A121E]">
+    <section id="intro-section" className="scroll-mt-20 py-28 lg:py-36 bg-[#FAF9F6] dark:bg-[#0A121E]">
       <Container size="wide">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           {/* Left Column */}
