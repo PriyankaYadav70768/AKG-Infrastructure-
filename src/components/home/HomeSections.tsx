@@ -26,10 +26,10 @@ export const Hero: React.FC = () => {
       {/* Background Large-Scale Photographic Composition */}
       <div className="absolute inset-0 z-0">
         <SafeImage
-          src="/images/home/hero-township.webp"
+          src="/images/home/village-plotting-hero.webp"
           fallbackSrc="/images/hero-main.jpg"
-          alt="Aerial view of master planned residential plotting layout with organized internal roads"
-          className="w-full h-full object-cover opacity-90 scale-[1.02] transition-transform duration-1000"
+          alt="Indian village residential plotting layout with clean asphalt road, boundary markers, and natural countryside"
+          className="w-full h-full object-cover object-center opacity-90 scale-[1.02] transition-transform duration-1000"
         />
         {/* Cinematic subtle dark gradient overlay for effortless typography legibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#142D45]/90 via-[#142D45]/60 to-transparent" />
