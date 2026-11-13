@@ -76,15 +76,25 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3.5 text-xs sm:text-sm text-gray-300">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#D4B07B] shrink-0 mt-0.5" />
-                <span>AKG Infrastructure Corporate Enclave</span>
+                <span>Maheshpur, Near HDFC Bank</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#D4B07B] shrink-0" />
-                <span>inquiry@akginfrastructure.com</span>
+                <a
+                  href="mailto:arvindmauryavns5@gmail.com"
+                  className="hover:text-white transition-colors"
+                >
+                  arvindmauryavns5@gmail.com
+                </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#D4B07B] shrink-0" />
-                <span>+91 (0) 11 4982 0000</span>
+                <a
+                  href="tel:6306917991"
+                  className="hover:text-white transition-colors"
+                >
+                  6306917991
+                </a>
               </li>
             </ul>
           </div>

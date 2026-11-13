@@ -653,8 +653,22 @@ export const FinalClosingCTASection: React.FC = () => {
             </Link>
           </div>
 
-          <div className="pt-8 border-t border-white/10 text-xs text-gray-400 font-sans">
-            <span>Corporate Enclave • inquiry@akginfrastructure.com • +91 (0) 11 4982 0000</span>
+          <div className="pt-8 border-t border-white/10 text-xs text-gray-400 font-sans flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+            <span>Maheshpur, Near HDFC Bank</span>
+            <span>•</span>
+            <a
+              href="mailto:arvindmauryavns5@gmail.com"
+              className="hover:text-white transition-colors"
+            >
+              arvindmauryavns5@gmail.com
+            </a>
+            <span>•</span>
+            <a
+              href="tel:6306917991"
+              className="hover:text-white transition-colors"
+            >
+              6306917991
+            </a>
           </div>
         </div>
       </Container>

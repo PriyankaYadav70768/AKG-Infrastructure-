@@ -71,12 +71,12 @@ export const Header: React.FC = () => {
             <div className="flex items-center gap-3">
               {/* Inquiry Phone Pill (Editorial Touch inspired by KHU Developers) */}
               <a
-                href="tel:+911149820000"
+                href="tel:6306917991"
                 className="hidden xl:inline-flex items-center gap-2 text-xs font-semibold text-[#667080] dark:text-[#94A3B8] hover:text-[#132338] dark:hover:text-white px-3 py-2 rounded-full border border-[#E8E6E1] dark:border-[#2D3748] transition-colors"
                 title="Direct Corporate Line"
               >
                 <Phone className="w-3.5 h-3.5 text-[#9E7844]" />
-                <span>+91 (0) 11 4982 0000</span>
+                <span>6306917991</span>
               </a>
 
               {/* Theme Toggle */}

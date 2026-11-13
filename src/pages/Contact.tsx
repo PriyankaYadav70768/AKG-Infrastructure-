@@ -49,24 +49,34 @@ export const Contact: React.FC = () => {
                 <div className="flex items-start gap-3.5 text-sm text-[#1F242A] dark:text-[#E2E8F0]">
                   <MapPin className="w-5 h-5 text-[#9E7844] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="block font-semibold">Corporate Enclave</strong>
-                    <span className="text-[#667080] dark:text-[#94A3B8] text-xs">Official corporate address available upon verification</span>
+                    <strong className="block font-semibold">Office Address</strong>
+                    <span className="text-[#667080] dark:text-[#94A3B8] text-xs">Maheshpur, Near HDFC Bank</span>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3.5 text-sm text-[#1F242A] dark:text-[#E2E8F0]">
                   <Mail className="w-5 h-5 text-[#9E7844] shrink-0" />
                   <div>
-                    <strong className="block font-semibold">General Inquiries</strong>
-                    <span className="text-[#667080] dark:text-[#94A3B8] text-xs">inquiry@akginfrastructure.com</span>
+                    <strong className="block font-semibold">Email Address</strong>
+                    <a
+                      href="mailto:arvindmauryavns5@gmail.com"
+                      className="text-[#667080] dark:text-[#94A3B8] text-xs hover:text-[#9E7844] dark:hover:text-[#D4B07B] transition-colors"
+                    >
+                      arvindmauryavns5@gmail.com
+                    </a>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3.5 text-sm text-[#1F242A] dark:text-[#E2E8F0]">
                   <Phone className="w-5 h-5 text-[#9E7844] shrink-0" />
                   <div>
-                    <strong className="block font-semibold">Telephone Exchange</strong>
-                    <span className="text-[#667080] dark:text-[#94A3B8] text-xs">+91 (0) 11 4982 0000</span>
+                    <strong className="block font-semibold">Phone Number</strong>
+                    <a
+                      href="tel:6306917991"
+                      className="text-[#667080] dark:text-[#94A3B8] text-xs hover:text-[#9E7844] dark:hover:text-[#D4B07B] transition-colors"
+                    >
+                      6306917991
+                    </a>
                   </div>
                 </div>
               </div>
