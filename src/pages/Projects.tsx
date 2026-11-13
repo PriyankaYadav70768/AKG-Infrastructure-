@@ -28,7 +28,7 @@ export const Projects: React.FC = () => {
       {/* Large Page Heading & Hero */}
       <section className="relative h-[48vh] min-h-[380px] flex items-end pb-14 overflow-hidden bg-[#142D45] text-white">
         <SafeImage
-          src="/images/projects-hero.jpg"
+          src="/images/home/aerial-township.webp"
           fallbackSrc="/images/projects-hero.jpg"
           alt="Aerial view of plotted land developments and planned residential enclaves"
           className="w-full h-full object-cover opacity-85 absolute inset-0"

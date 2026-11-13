@@ -12,7 +12,7 @@ export const Expertise: React.FC = () => {
       {/* Page Hero */}
       <section className="relative h-[48vh] min-h-[380px] flex items-end pb-14 overflow-hidden bg-[#142D45] text-white">
         <SafeImage
-          src="/images/expertise-hero.jpg"
+          src="/images/expertise/green-township.webp"
           fallbackSrc="/images/expertise-hero.jpg"
           alt="Aerial view of master planned land development and plot demarcations"
           className="w-full h-full object-cover opacity-85 absolute inset-0"

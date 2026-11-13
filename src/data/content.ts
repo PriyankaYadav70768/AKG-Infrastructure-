@@ -34,7 +34,7 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     scope: '6-Lane Arterial Link & Flyover Structures',
     description: 'High-density transit development engineered for long-term traffic throughput, seismic resilience, and smart grade separation.',
     status: 'In Progress',
-    image: '/images/project-happy-home.jpg',
+    image: '/images/projects/project-01.webp',
     year: 'Phase II',
     highlight: 'Active Viaduct Erection',
   },
@@ -46,7 +46,7 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     scope: 'Warehouse Systems, Heavy Pavements & Power Grid',
     description: 'Turnkey industrial estate spanning civil ground stabilization, automated distribution facilities, and storm drainage infrastructure.',
     status: 'Site Development',
-    image: '/images/project-nature-city.jpg',
+    image: '/images/projects/project-02.webp',
     year: 'Under Execution',
     highlight: 'Heavy Pavement Stabilization',
   },
@@ -58,7 +58,7 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     scope: 'Reinforced Concrete Framework & High-Spec Enclosure',
     description: 'Modern institutional multi-story civic building integrated with energy-efficient building services, sustainable facade, and public concourse.',
     status: 'In Progress',
-    image: '/images/project-laxmi-nagar.jpg',
+    image: '/images/projects/project-03.webp',
     year: 'Structural Shell',
     highlight: 'Civic Concourse & Atrium',
   },
@@ -70,7 +70,7 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     scope: 'Deep Caisson Foundations & Composite Decking',
     description: 'Precision-engineered river crossing built to withstand extreme monsoon water velocity with high-tensile structural steel pylons.',
     status: 'Engineering Design',
-    image: '/images/project-vikas-nagar.jpg',
+    image: '/images/projects/project-04.webp',
     year: 'Engineering Review',
     highlight: 'Deep Caisson Foundations',
   },
@@ -82,7 +82,7 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     scope: 'Multi-Block Tech Hub & Underground Substructure',
     description: 'State-of-the-art office infrastructure with deep basement retaining structures, precast structural components, and rainwater harvesting.',
     status: 'Planning Phase',
-    image: '/images/project-kailashpuri.jpg',
+    image: '/images/projects/project-05.webp',
     year: 'Permitting',
     highlight: 'Subsurface Retaining Walls',
   },
@@ -94,7 +94,7 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     scope: 'Concrete Overpasses & Soil Reinforcement',
     description: 'Multi-level cloverleaf highway connection designed for heavy-axle freight traffic and uninterrupted logistics movement.',
     status: 'In Progress',
-    image: '/images/project-mangleshwar.jpg',
+    image: '/images/projects/project-06.webp',
     year: 'Grading Phase',
     highlight: 'Grade Separators',
   },
@@ -120,7 +120,7 @@ export const EXPERTISE_LIST: ExpertiseItem[] = [
     fullDesc: 'We coordinate end-to-end infrastructure schemes from baseline geotechnical assessments to integrated site utilities, water networks, and power distribution conduits.',
     iconName: 'Building2',
     capabilities: ['Master Site Planning', 'Subsurface Utility Engineering', 'Bulk Earthmoving & Grading', 'Stormwater & Environmental Systems'],
-    image: '/images/expertise-infra-dev.jpg',
+    image: '/images/expertise/residential-plots.webp',
   },
   {
     id: 'civil-const',
@@ -130,7 +130,7 @@ export const EXPERTISE_LIST: ExpertiseItem[] = [
     fullDesc: 'Our civil engineering capability encompasses drilled shafts, diaphragm walls, post-tensioned slabs, and robust concrete structures built under rigorous quality controls.',
     iconName: 'HardHat',
     capabilities: ['Deep Piling & Foundations', 'Reinforced Concrete Frameworks', 'Retaining Walls & Soil Anchors', 'Precision Structural Pouring'],
-    image: '/images/expertise-civil-const.jpg',
+    image: '/images/expertise/land-planning.webp',
   },
   {
     id: 'building-const',
@@ -140,7 +140,7 @@ export const EXPERTISE_LIST: ExpertiseItem[] = [
     fullDesc: 'Delivering durable vertical assets with modern building envelopes, MEP integration, vertical transit cores, and fine commercial grade finishing.',
     iconName: 'Building',
     capabilities: ['Commercial High-Rise Shells', 'Institutional Facilities', 'Specialized MEP Infrastructure', 'Facade & Envelope Engineering'],
-    image: '/images/expertise-building-const.jpg',
+    image: '/images/expertise/green-township.webp',
   },
   {
     id: 'transportation',
@@ -150,7 +150,7 @@ export const EXPERTISE_LIST: ExpertiseItem[] = [
     fullDesc: 'Executing complex highway sections, heavy-duty asphalt and rigid concrete pavements, flyovers, roundabouts, and modern intelligent transport civil works.',
     iconName: 'Compass',
     capabilities: ['Rigid & Flexible Pavements', 'Elevated Viaducts & Overpasses', 'Corridor Grade Separation', 'Traffic Management Infrastructure'],
-    image: '/images/expertise-road-transport.jpg',
+    image: '/images/expertise/developed-layout.webp',
   },
   {
     id: 'project-execution',
@@ -160,7 +160,7 @@ export const EXPERTISE_LIST: ExpertiseItem[] = [
     fullDesc: 'From initial constructability reviews to integrated milestone delivery, our engineering teams deploy structured project controls to minimize risks and ensure safety.',
     iconName: 'Ruler',
     capabilities: ['BIM & Clash Detection', 'Critical Path Method Scheduling', 'Vendor Quality Auditing', 'Comprehensive HSE Site Protocols'],
-    image: '/images/expertise-project-exec.jpg',
+    image: '/images/about/about-township.webp',
   },
   {
     id: 'commercial-dev',
@@ -170,7 +170,7 @@ export const EXPERTISE_LIST: ExpertiseItem[] = [
     fullDesc: 'Designing and executing scalable commercial infrastructure tailored to freight logistics, corporate parks, and high-efficiency operational centers.',
     iconName: 'Briefcase',
     capabilities: ['Logistics & Warehousing Hubs', 'Corporate Headquarters Shells', 'Heavy Industrial Yards', 'Turnkey Facility Integration'],
-    image: '/images/expertise-commercial-dev.jpg',
+    image: '/images/industries/plotted-township.webp',
   },
 ];
 
@@ -192,7 +192,7 @@ export const INDUSTRIES_LIST: IndustryItem[] = [
     tagline: 'High-performing workspaces & corporate centers',
     description: 'Modern corporate parks, logistics facilities, and commercial office developments constructed with energy-conscious frameworks and scalable MEP layouts.',
     keyAspects: ['Corporate Offices', 'Business Parks', 'Mixed-Use Developments'],
-    image: '/images/industry-commercial.jpg',
+    image: '/images/industries/residential-plots.webp',
   },
   {
     id: 'residential',
@@ -201,7 +201,7 @@ export const INDUSTRIES_LIST: IndustryItem[] = [
     tagline: 'Planned communities & residential towers',
     description: 'Subdivision civil infrastructure, internal road networks, utility backbones, and multi-unit structural shells built for long-term community longevity.',
     keyAspects: ['Master Planned Enclaves', 'Residential High-Rises', 'Community Utilities'],
-    image: '/images/industry-residential.jpg',
+    image: '/images/industries/residential-community.webp',
   },
   {
     id: 'industrial',
@@ -210,7 +210,7 @@ export const INDUSTRIES_LIST: IndustryItem[] = [
     tagline: 'Heavy-duty processing & manufacturing plants',
     description: 'Robust foundations, high-clearance crane-ready structural steel bays, heavy-axle concrete slabs, and industrial containment systems.',
     keyAspects: ['Manufacturing Facilities', 'Heavy Storage Sheds', 'Processing Units'],
-    image: '/images/industry-industrial.jpg',
+    image: '/images/industries/land-development.webp',
   },
   {
     id: 'transportation',
@@ -219,7 +219,7 @@ export const INDUSTRIES_LIST: IndustryItem[] = [
     tagline: 'Highways, flyovers, transit links & bridges',
     description: 'Regional transit systems, multi-modal terminals, toll corridors, and grade-separated interchanges designed for continuous heavy vehicular movement.',
     keyAspects: ['Highways & Expressways', 'Bridges & Flyovers', 'Transit Hubs'],
-    image: '/images/industry-transportation.jpg',
+    image: '/images/industries/plotted-township.webp',
   },
   {
     id: 'institutional',
@@ -228,7 +228,7 @@ export const INDUSTRIES_LIST: IndustryItem[] = [
     tagline: 'Educational, healthcare & research facilities',
     description: 'Specialized public interest facilities demanding stringent structural codes, clean-room compatibility, and resilient backup service architectures.',
     keyAspects: ['Hospitals & Healthcare', 'Educational Campuses', 'Research Facilities'],
-    image: '/images/industry-institutional.jpg',
+    image: '/images/industries/greenfield-layout.webp',
   },
   {
     id: 'public-infra',
@@ -237,7 +237,7 @@ export const INDUSTRIES_LIST: IndustryItem[] = [
     tagline: 'Water networks, urban drainage & civic utilities',
     description: 'Essential municipal infrastructure including stormwater trunk lines, culvert systems, civic administrative complexes, and public plazas.',
     keyAspects: ['Civic Administrative Buildings', 'Drainage & Water Works', 'Public Plazas'],
-    image: '/images/industry-public-infra.jpg',
+    image: '/images/industries/developed-properties.webp',
   },
 ];
 

@@ -26,7 +26,7 @@ export const Hero: React.FC = () => {
       {/* Background Large-Scale Photographic Composition */}
       <div className="absolute inset-0 z-0">
         <SafeImage
-          src="/images/hero-main.jpg"
+          src="/images/home/hero-township.webp"
           fallbackSrc="/images/hero-main.jpg"
           alt="Aerial view of master planned residential plotting layout with organized internal roads"
           className="w-full h-full object-cover opacity-90 scale-[1.02] transition-transform duration-1000"
@@ -131,7 +131,7 @@ export const EditorialIntroSection: React.FC = () => {
           <div className="lg:col-span-6">
             <div className="relative overflow-hidden rounded-none shadow-2xl border border-[#EAE6DF] dark:border-[#20272D] group">
               <SafeImage
-                src="/images/intro-architecture.jpg"
+                src="/images/about/about-landscape.webp"
                 fallbackSrc="/images/intro-architecture.jpg"
                 alt="Surveyed residential plots and developed land layout with natural surroundings"
                 className="w-full h-[460px] sm:h-[540px] object-cover image-reveal"
