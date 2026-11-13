@@ -28,8 +28,8 @@ export const Projects: React.FC = () => {
       {/* Large Page Heading & Hero */}
       <section className="relative h-[48vh] min-h-[380px] flex items-end pb-14 overflow-hidden bg-[#142D45] text-white">
         <SafeImage
-          src="/editorial-hero.svg"
-          fallbackSrc="/editorial-hero.svg"
+          src="/images/projects-hero.jpg"
+          fallbackSrc="/images/projects-hero.jpg"
           alt="AKG Infrastructure representative portfolio"
           className="w-full h-full object-cover opacity-85 absolute inset-0"
         />
@@ -80,7 +80,7 @@ export const Projects: React.FC = () => {
               <div className="relative overflow-hidden h-[460px] sm:h-[540px] shadow-2xl group border border-[#EAE6DF] dark:border-[#20272D]">
                 <SafeImage
                   src={filteredProjects[0].image}
-                  fallbackSrc="/editorial-hero.svg"
+                  fallbackSrc={filteredProjects[0].image}
                   alt={filteredProjects[0].title}
                   className="w-full h-full object-cover image-reveal"
                 />
@@ -120,7 +120,7 @@ export const Projects: React.FC = () => {
                   <div className="relative h-64 overflow-hidden">
                     <SafeImage
                       src={project.image}
-                      fallbackSrc="/about-operations.svg"
+                      fallbackSrc={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover image-reveal"
                     />

@@ -5,7 +5,7 @@ import { LoginForm } from './LoginForm';
 import { JoinForm } from './JoinForm';
 import { ForgotPasswordModal } from './ForgotPasswordModal';
 import { SafeImage } from '../common/SafeImage';
-import authPreviewAsset from '../../assets/about-operations.svg';
+import authPreviewAsset from '../../assets/images/auth-operations.jpg';
 
 export const AuthLayout: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'login' | 'join'>('login');
@@ -83,8 +83,8 @@ export const AuthLayout: React.FC = () => {
             <div className="relative z-10 rounded-xl overflow-hidden border border-[#E8E6E1] dark:border-[#20272D] bg-[#FFFFFF] dark:bg-[#142338] shadow-sm">
               <SafeImage
                 src={authPreviewAsset}
-                fallbackSrc="/about-operations.svg"
-                alt="Engineering infrastructure site construction"
+                fallbackSrc="/images/auth-operations.jpg"
+                alt="Active civil engineering construction site management"
                 className="w-full h-44 object-cover"
               />
               <div className="p-3 bg-white dark:bg-[#142338] flex items-center justify-between text-xs text-[#777C80] dark:text-[#A0A6AC]">

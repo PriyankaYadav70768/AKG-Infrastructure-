@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import fallbackConstruction from '../../assets/hero-construction.svg';
+import fallbackConstruction from '../../assets/images/fallback-construction.jpg';
 
 interface SafeImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   fallbackSrc?: string;

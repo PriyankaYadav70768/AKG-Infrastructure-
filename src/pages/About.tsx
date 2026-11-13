@@ -11,8 +11,8 @@ export const About: React.FC = () => {
       {/* 1. Large Photographic Page Hero */}
       <section className="relative h-[55vh] min-h-[420px] flex items-end pb-16 overflow-hidden bg-[#142D45] text-white">
         <SafeImage
-          src="/editorial-hero.svg"
-          fallbackSrc="/editorial-hero.svg"
+          src="/images/about-hero.jpg"
+          fallbackSrc="/images/about-hero.jpg"
           alt="AKG Infrastructure site execution and engineering"
           className="w-full h-full object-cover opacity-85 absolute inset-0"
         />
@@ -50,8 +50,8 @@ export const About: React.FC = () => {
             <div className="lg:col-span-6">
               <div className="relative overflow-hidden shadow-2xl border border-[#EAE6DF] dark:border-[#20272D]">
                 <SafeImage
-                  src="/intro-architecture.svg"
-                  fallbackSrc="/intro-architecture.svg"
+                  src="/images/intro-architecture.jpg"
+                  fallbackSrc="/images/intro-architecture.jpg"
                   alt="Architectural development and engineering standards"
                   className="w-full h-[440px] sm:h-[500px] object-cover image-reveal"
                 />

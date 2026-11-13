@@ -26,8 +26,8 @@ export const Hero: React.FC = () => {
       {/* Background Large-Scale Photographic Composition */}
       <div className="absolute inset-0 z-0">
         <SafeImage
-          src="/editorial-hero.svg"
-          fallbackSrc="/editorial-hero.svg"
+          src="/images/hero-main.jpg"
+          fallbackSrc="/images/hero-main.jpg"
           alt="Large-scale infrastructure engineering and corridor execution"
           className="w-full h-full object-cover opacity-90 scale-[1.02] transition-transform duration-1000"
         />
@@ -131,8 +131,8 @@ export const EditorialIntroSection: React.FC = () => {
           <div className="lg:col-span-6">
             <div className="relative overflow-hidden rounded-none shadow-2xl border border-[#EAE6DF] dark:border-[#20272D] group">
               <SafeImage
-                src="/intro-architecture.svg"
-                fallbackSrc="/intro-architecture.svg"
+                src="/images/intro-architecture.jpg"
+                fallbackSrc="/images/intro-architecture.jpg"
                 alt="AKG Infrastructure architectural and purposeful development"
                 className="w-full h-[460px] sm:h-[540px] object-cover image-reveal"
               />
@@ -263,7 +263,7 @@ export const DominantProjectsSection: React.FC = () => {
             <div className="relative overflow-hidden h-[440px] sm:h-[520px] shadow-xl">
               <SafeImage
                 src={FEATURED_PROJECTS[0].image}
-                fallbackSrc="/editorial-hero.svg"
+                fallbackSrc="/images/project-metro-viaduct.jpg"
                 alt={FEATURED_PROJECTS[0].title}
                 className="w-full h-full object-cover image-reveal"
               />
@@ -299,7 +299,7 @@ export const DominantProjectsSection: React.FC = () => {
             <div className="relative overflow-hidden h-[440px] sm:h-[520px] shadow-xl flex flex-col justify-end p-8 text-white">
               <SafeImage
                 src={FEATURED_PROJECTS[1].image}
-                fallbackSrc="/about-operations.svg"
+                fallbackSrc="/images/project-logistics-park.jpg"
                 alt={FEATURED_PROJECTS[1].title}
                 className="w-full h-full object-cover image-reveal absolute inset-0"
               />
@@ -331,7 +331,7 @@ export const DominantProjectsSection: React.FC = () => {
           <div className="group relative overflow-hidden h-[340px] sm:h-[380px] p-8 text-white flex flex-col justify-end">
             <SafeImage
               src={FEATURED_PROJECTS[2].image}
-              fallbackSrc="/public-infrastructure.svg"
+              fallbackSrc="/images/project-civic-tower.jpg"
               alt={FEATURED_PROJECTS[2].title}
               className="w-full h-full object-cover image-reveal absolute inset-0"
             />
@@ -352,7 +352,7 @@ export const DominantProjectsSection: React.FC = () => {
           <div className="group relative overflow-hidden h-[340px] sm:h-[380px] p-8 text-white flex flex-col justify-end">
             <SafeImage
               src={FEATURED_PROJECTS[3].image}
-              fallbackSrc="/intro-architecture.svg"
+              fallbackSrc="/images/project-river-bridge.jpg"
               alt={FEATURED_PROJECTS[3].title}
               className="w-full h-full object-cover image-reveal absolute inset-0"
             />
@@ -396,8 +396,8 @@ export const DarkBrandExperienceSection: React.FC = () => {
           <div className="lg:col-span-5">
             <div className="relative overflow-hidden border border-[#B18A58]/30 h-72 sm:h-80 shadow-2xl">
               <SafeImage
-                src="/about-operations.svg"
-                fallbackSrc="/about-operations.svg"
+                src="/images/brand-experience.jpg"
+                fallbackSrc="/images/brand-experience.jpg"
                 alt="Active technical supervision and governance"
                 className="w-full h-full object-cover opacity-85"
               />
@@ -453,7 +453,7 @@ export const EditorialIndustriesSection: React.FC = () => {
               <div className="h-64 sm:h-80 overflow-hidden relative">
                 <SafeImage
                   src={ind.image}
-                  fallbackSrc="/about-operations.svg"
+                  fallbackSrc={ind.image}
                   alt={ind.title}
                   className="w-full h-full object-cover image-reveal"
                 />
@@ -489,7 +489,7 @@ export const EditorialIndustriesSection: React.FC = () => {
             <div className="lg:col-span-7 h-72 sm:h-96 overflow-hidden relative">
               <SafeImage
                 src={INDUSTRIES_LIST[2].image}
-                fallbackSrc="/intro-architecture.svg"
+                fallbackSrc={INDUSTRIES_LIST[2].image}
                 alt={INDUSTRIES_LIST[2].title}
                 className="w-full h-full object-cover image-reveal"
               />
@@ -532,7 +532,7 @@ export const EditorialIndustriesSection: React.FC = () => {
               <div className="h-56 overflow-hidden relative">
                 <SafeImage
                   src={ind.image}
-                  fallbackSrc="/public-infrastructure.svg"
+                  fallbackSrc={ind.image}
                   alt={ind.title}
                   className="w-full h-full object-cover image-reveal"
                 />
@@ -572,8 +572,8 @@ export const EditorialApproachSection: React.FC = () => {
           <div className="lg:col-span-6">
             <div className="relative overflow-hidden shadow-2xl border border-[#EAE6DF] dark:border-[#20272D]">
               <SafeImage
-                src="/about-operations.svg"
-                fallbackSrc="/about-operations.svg"
+                src="/images/operational-framework.jpg"
+                fallbackSrc="/images/operational-framework.jpg"
                 alt="Disciplined on-site engineering and supervision activity"
                 className="w-full h-[460px] sm:h-[540px] object-cover image-reveal"
               />

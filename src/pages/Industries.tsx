@@ -32,7 +32,7 @@ export const Industries: React.FC = () => {
                 <div className="h-56 overflow-hidden relative">
                   <SafeImage
                     src={ind.image}
-                    fallbackSrc="/public-infrastructure.svg"
+                    fallbackSrc={ind.image}
                     alt={ind.title}
                     className="w-full h-full object-cover image-reveal"
                   />

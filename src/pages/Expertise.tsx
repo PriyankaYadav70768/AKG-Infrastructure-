@@ -12,8 +12,8 @@ export const Expertise: React.FC = () => {
       {/* Page Hero */}
       <section className="relative h-[48vh] min-h-[380px] flex items-end pb-14 overflow-hidden bg-[#142D45] text-white">
         <SafeImage
-          src="/editorial-hero.svg"
-          fallbackSrc="/editorial-hero.svg"
+          src="/images/expertise-hero.jpg"
+          fallbackSrc="/images/expertise-hero.jpg"
           alt="AKG Infrastructure technical expertise"
           className="w-full h-full object-cover opacity-85 absolute inset-0"
         />
@@ -93,7 +93,7 @@ export const Expertise: React.FC = () => {
                   <div className="relative overflow-hidden shadow-2xl border border-[#EAE6DF] dark:border-[#20272D] h-72 sm:h-96">
                     <SafeImage
                       src={item.image}
-                      fallbackSrc="/editorial-hero.svg"
+                      fallbackSrc={item.image}
                       alt={item.title}
                       className="w-full h-full object-cover image-reveal"
                     />
