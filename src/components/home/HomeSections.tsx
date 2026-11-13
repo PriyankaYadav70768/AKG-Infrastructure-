@@ -263,7 +263,7 @@ export const DominantProjectsSection: React.FC = () => {
             <div className="relative overflow-hidden h-[440px] sm:h-[520px] shadow-xl">
               <SafeImage
                 src={FEATURED_PROJECTS[0].image}
-                fallbackSrc="/images/project-metro-viaduct.jpg"
+                fallbackSrc={FEATURED_PROJECTS[0].image}
                 alt={FEATURED_PROJECTS[0].title}
                 className="w-full h-full object-cover image-reveal"
               />
@@ -299,7 +299,7 @@ export const DominantProjectsSection: React.FC = () => {
             <div className="relative overflow-hidden h-[440px] sm:h-[520px] shadow-xl flex flex-col justify-end p-8 text-white">
               <SafeImage
                 src={FEATURED_PROJECTS[1].image}
-                fallbackSrc="/images/project-logistics-park.jpg"
+                fallbackSrc={FEATURED_PROJECTS[1].image}
                 alt={FEATURED_PROJECTS[1].title}
                 className="w-full h-full object-cover image-reveal absolute inset-0"
               />
@@ -331,7 +331,7 @@ export const DominantProjectsSection: React.FC = () => {
           <div className="group relative overflow-hidden h-[340px] sm:h-[380px] p-8 text-white flex flex-col justify-end">
             <SafeImage
               src={FEATURED_PROJECTS[2].image}
-              fallbackSrc="/images/project-civic-tower.jpg"
+              fallbackSrc={FEATURED_PROJECTS[2].image}
               alt={FEATURED_PROJECTS[2].title}
               className="w-full h-full object-cover image-reveal absolute inset-0"
             />
@@ -352,7 +352,7 @@ export const DominantProjectsSection: React.FC = () => {
           <div className="group relative overflow-hidden h-[340px] sm:h-[380px] p-8 text-white flex flex-col justify-end">
             <SafeImage
               src={FEATURED_PROJECTS[3].image}
-              fallbackSrc="/images/project-river-bridge.jpg"
+              fallbackSrc={FEATURED_PROJECTS[3].image}
               alt={FEATURED_PROJECTS[3].title}
               className="w-full h-full object-cover image-reveal absolute inset-0"
             />
