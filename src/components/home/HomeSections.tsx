@@ -396,10 +396,10 @@ export const DarkBrandExperienceSection: React.FC = () => {
           <div className="lg:col-span-5">
             <div className="relative overflow-hidden border border-[#B18A58]/30 h-72 sm:h-80 shadow-2xl">
               <SafeImage
-                src="/images/brand-experience.jpg"
-                fallbackSrc="/images/brand-experience.jpg"
-                alt="Golden hour view over serene green plotted residential development"
-                className="w-full h-full object-cover opacity-85"
+                src="/images/banner-family-plot.jpg"
+                fallbackSrc="/images/banner-family-plot.jpg"
+                alt="Realistic Indian family exploring developed residential plots in a planned township"
+                className="w-full h-full object-cover opacity-90"
               />
             </div>
           </div>
