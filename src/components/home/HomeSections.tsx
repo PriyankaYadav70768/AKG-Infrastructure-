@@ -12,8 +12,54 @@ import {
   FAQS,
 } from '../../data/content';
 
-// SECTION 01 — FULL-SCREEN CINEMATIC HERO (75-90% Viewport Height)
+// SECTION 01 — FULL-SCREEN CINEMATIC HERO (75-90% Viewport Height) WITH AUTOMATIC IMAGE SLIDER
+const HERO_SLIDES = [
+  {
+    image: '/images/home/hero-slide-1.webp',
+    fallback: '/images/hero-main.jpg',
+    alt: 'Indian Village Residential Plotting with clean asphalt road, demarcated plots and village homes',
+    label: 'Village Plotting'
+  },
+  {
+    image: '/images/home/hero-slide-2.webp',
+    fallback: '/images/expertise/residential-plots.webp',
+    alt: 'Green Residential Plotting with boundary walls, green grass and black asphalt roads',
+    label: 'Green Plotting'
+  },
+  {
+    image: '/images/home/hero-slide-3.webp',
+    fallback: '/images/about/about-landscape.webp',
+    alt: 'Developed Village Township with brick houses, road connectivity and open surroundings',
+    label: 'Village Township'
+  },
+  {
+    image: '/images/home/hero-slide-4.webp',
+    fallback: '/images/home/hero-township.webp',
+    alt: 'Aerial View of Indian Plotting layout with clear boundaries and connecting asphalt roads',
+    label: 'Aerial View'
+  }
+];
+
 export const Hero: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+
+  // Automatic crossfade rotation every 4.5 seconds
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+    }, 4500);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  // Preload upcoming slides into memory
+  React.useEffect(() => {
+    HERO_SLIDES.forEach((slide) => {
+      const img = new Image();
+      img.src = slide.image;
+    });
+  }, []);
+
   const handleScrollDown = () => {
     const nextSection = document.getElementById('intro-section');
     if (nextSection) {
@@ -23,21 +69,33 @@ export const Hero: React.FC = () => {
 
   return (
     <section className="relative min-h-[85vh] lg:min-h-[88vh] flex flex-col justify-between overflow-hidden bg-[#142D45] text-white">
-      {/* Background Large-Scale Photographic Composition */}
+      {/* Background Automatic Crossfade Image Slider */}
       <div className="absolute inset-0 z-0">
-        <SafeImage
-          src="/images/home/village-plotting-hero.webp"
-          fallbackSrc="/images/hero-main.jpg"
-          alt="Indian village residential plotting layout with clean asphalt road, boundary markers, and natural countryside"
-          className="w-full h-full object-cover object-center opacity-90 scale-[1.02] transition-transform duration-1000"
-        />
+        {HERO_SLIDES.map((slide, index) => {
+          const isActive = index === currentSlide;
+          return (
+            <div
+              key={slide.image}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+              }`}
+            >
+              <SafeImage
+                src={slide.image}
+                fallbackSrc={slide.fallback}
+                alt={slide.alt}
+                className="w-full h-full object-cover object-center scale-[1.02] transition-transform duration-1000"
+              />
+            </div>
+          );
+        })}
         {/* Cinematic subtle dark gradient overlay for effortless typography legibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#142D45]/90 via-[#142D45]/60 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#142D45]/90 via-transparent to-black/30" />
+        <div className="absolute inset-0 z-20 bg-gradient-to-r from-[#142D45]/90 via-[#142D45]/60 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 z-20 bg-gradient-to-t from-[#142D45]/90 via-transparent to-black/30 pointer-events-none" />
       </div>
 
       {/* Main Content: Positioned toward lower-left / center-left */}
-      <Container size="wide" className="relative z-10 my-auto pt-24 pb-12">
+      <Container size="wide" className="relative z-30 my-auto pt-24 pb-12">
         <div className="max-w-3xl space-y-6 text-left">
           {/* Small uppercase label */}
           <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-[#B18A58]/50 bg-[#142D45]/60 backdrop-blur-md text-[#D4B07B] text-[11px] font-bold tracking-[0.2em] uppercase font-sans">
@@ -76,8 +134,26 @@ export const Hero: React.FC = () => {
         </div>
       </Container>
 
-      {/* Small Scroll Indicator near bottom */}
-      <div className="relative z-10 pb-8 flex items-center justify-center">
+      {/* Navigation Controls: Slide Indicators (4 Dots) & Scroll Down */}
+      <div className="relative z-30 pb-8 flex flex-col items-center justify-center gap-4">
+        {/* 4 Interactive Dots for Slider */}
+        <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-[#142D45]/70 backdrop-blur-md border border-[#B18A58]/30">
+          {HERO_SLIDES.map((slide, idx) => (
+            <button
+              key={slide.label}
+              type="button"
+              onClick={() => setCurrentSlide(idx)}
+              aria-label={`Switch to slide ${idx + 1}: ${slide.label}`}
+              className={`transition-all duration-300 rounded-full cursor-pointer focus:outline-hidden ${
+                idx === currentSlide
+                  ? 'w-6 h-2 bg-[#D4B07B]'
+                  : 'w-2 h-2 bg-white/40 hover:bg-white/80'
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Scroll Indicator */}
         <button
           type="button"
           onClick={handleScrollDown}
