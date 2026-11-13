@@ -1,202 +1,142 @@
 [
   {
-    "slot": "hero-main.jpg",
-    "desc": "Metro Highway Corridor & Elevated Viaduct construction banner",
-    "title": "File:Yard for cranes - geograph.org.uk - 5442171.jpg",
-    "author": "Oliver Dixon ",
-    "license": "CC BY-SA 2.0",
-    "size": 220222
+    "filename": "hero-main.jpg",
+    "url": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80",
+    "title": "Aerial View of Expansive Land Plotting Layout with Clean Road Boundaries"
   },
   {
-    "slot": "about-hero.jpg",
-    "desc": "Large photographic page hero for Company Overview",
-    "title": "File:Münster, Albert-Schweitzer-Campus, Universitätsklinikum -- 2018 -- 1180.jpg",
-    "author": "Dietmar Rabich",
-    "license": "CC BY-SA 4.0",
-    "size": 417518
+    "filename": "about-hero.jpg",
+    "url": "https://images.unsplash.com/photo-1500076656116-558758c991c1?auto=format&fit=crop&w=1600&q=80",
+    "title": "Planned Residential Land Development and Surveyed Plots"
   },
   {
-    "slot": "intro-architecture.jpg",
-    "desc": "Balancing Structural Rigor with Practical Execution",
-    "title": "File:View of the Visitor Center building looking east towards the Memorial Groves (8d313f27-155d-451f-67bb-19d3563c20ba).JPG",
-    "author": "National Park Service",
-    "license": "Public domain",
-    "size": 367037
+    "filename": "intro-architecture.jpg",
+    "url": "https://images.unsplash.com/photo-1524813686514-a57563d77d66?auto=format&fit=crop&w=1400&q=80",
+    "title": "Demarcated Residential Plotting Scheme Ready for Development"
   },
   {
-    "slot": "projects-hero.jpg",
-    "desc": "Projects portfolio hero banner",
-    "title": "File:Dialnica49.jpg",
-    "author": "Marzo2k",
-    "license": "GPL",
-    "size": 422690
+    "filename": "expertise-hero.jpg",
+    "url": "https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?auto=format&fit=crop&w=1600&q=80",
+    "title": "Aerial Perspective of Master Planned Land Layout"
   },
   {
-    "slot": "industries-hero.jpg",
-    "desc": "Industries section hero banner",
-    "title": "File:New Mollinsburn Interchange - geograph.org.uk - 1622194.jpg",
-    "author": "BJ Smur",
-    "license": "CC BY-SA 2.0",
-    "size": 107337
+    "filename": "projects-hero.jpg",
+    "url": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1600&q=80",
+    "title": "Integrated Township Plotting and Road Network"
   },
   {
-    "slot": "brand-experience.jpg",
-    "desc": "Dark Brand Experience - 350+ completed assets",
-    "title": "File:Cranes of Dusk.jpg",
-    "author": "Badseed",
-    "license": "CC BY-SA 4.0",
-    "size": 409682
+    "filename": "industries-hero.jpg",
+    "url": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+    "title": "Residential Land Enclave and Planned Plot Layout"
   },
   {
-    "slot": "operational-framework.jpg",
-    "desc": "Operational Framework and engineering supervision",
-    "title": "File:Lanyon memorial, Knockbreda Cemetery, Belfast - geograph.org.uk - 804750.jpg",
-    "author": "Ross",
-    "license": "CC BY-SA 2.0",
-    "size": 321423
+    "filename": "auth-operations.jpg",
+    "url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=80",
+    "title": "Field Engineer and Land Surveyor Inspecting Demarcation Alignment"
   },
   {
-    "slot": "project-metro-viaduct.jpg",
-    "desc": "Metro Highway Corridor & Elevated Viaduct",
-    "title": "File:Chennai Metro viaduct work.jpg",
-    "author": "VtTN",
-    "license": "CC BY-SA 3.0",
-    "size": 312860
+    "filename": "brand-experience.jpg",
+    "url": "https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?auto=format&fit=crop&w=1600&q=80",
+    "title": "Golden Sunset over Planned Green Residential Plotting Township"
   },
   {
-    "slot": "project-logistics-park.jpg",
-    "desc": "Integrated Logistics & Industrial Park",
-    "title": "File:The first building in Summit 24 Business Park, Lindley - geograph.org.uk - 5131105.jpg",
-    "author": "Humphrey Bolton ",
-    "license": "CC BY-SA 2.0",
-    "size": 503453
+    "filename": "operational-framework.jpg",
+    "url": "https://images.unsplash.com/photo-1541888946425-d0fbb186c5f8?auto=format&fit=crop&w=1400&q=80",
+    "title": "Real Estate Planning and Field Survey Demarcation"
   },
   {
-    "slot": "project-civic-tower.jpg",
-    "desc": "Civic Administrative Tower & Plaza",
-    "title": "File:High-rise construction in Atlantic Station, July 2008.jpg",
-    "author": "Jesse Budlong from the chi",
-    "license": "CC BY 2.0",
-    "size": 537511
+    "filename": "fallback-construction.jpg",
+    "url": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1400&q=80",
+    "title": "Universal Fallback: Demarcated Residential Plot Landscape"
   },
   {
-    "slot": "project-river-bridge.jpg",
-    "desc": "Regional River Span Cable Bridge",
-    "title": "File:Construction of Almö Bridge 1958-08-27 001.jpg",
-    "author": "Anders Hedvall / Bohusläns museum",
-    "license": "Public domain",
-    "size": 3248
+    "filename": "project-metro-viaduct.jpg",
+    "url": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1400&q=80",
+    "title": "Gated Residential Plot Layout with Internal Sector Pathways"
   },
   {
-    "slot": "project-business-campus.jpg",
-    "desc": "Eco-Technology Business Campus",
-    "title": "File:Construction work, Unity Campus - geograph.org.uk - 7468034.jpg",
-    "author": "Hugh Venables ",
-    "license": "CC BY-SA 2.0",
-    "size": 419510
+    "filename": "project-logistics-park.jpg",
+    "url": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1400&q=80",
+    "title": "Master Planned Commercial & Mixed-Use Land Plotting Layout"
   },
   {
-    "slot": "project-highway-interchange.jpg",
-    "desc": "Interstate Freight Arterial Interchange",
-    "title": "File:Sign Gantry and Flyover, A2-M25 Interchange - geograph.org.uk - 3631571.jpg",
-    "author": "David Dixon ",
-    "license": "CC BY-SA 2.0",
-    "size": 266511
+    "filename": "project-civic-tower.jpg",
+    "url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=80",
+    "title": "Scenic Hillside Residential Plots Ready for Villa Construction"
   },
   {
-    "slot": "expertise-infra-dev.jpg",
-    "desc": "Infrastructure Development - bulk earthmoving & grading",
-    "title": "File:Caterpillar 330 excavator on a pile of dirt.jpg",
-    "author": "Matthew T Rader",
-    "license": "CC BY-SA 4.0",
-    "size": 445307
+    "filename": "project-river-bridge.jpg",
+    "url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80",
+    "title": "Riverfront Waterfront Residential Plotting Scheme"
   },
   {
-    "slot": "expertise-civil-const.jpg",
-    "desc": "Civil Construction - deep foundation & reinforced concrete",
-    "title": "File:Rebar worker.jpg",
-    "author": "Tomas Castelazo",
-    "license": "CC BY-SA 3.0",
-    "size": 712805
+    "filename": "project-business-campus.jpg",
+    "url": "https://images.unsplash.com/photo-1511497584788-87676104235f?auto=format&fit=crop&w=1400&q=80",
+    "title": "Eco-Friendly Green Residential Township and Demarcated Plots"
   },
   {
-    "slot": "expertise-building-const.jpg",
-    "desc": "Building Construction - vertical structural shells",
-    "title": "File:Europa Building (EU Brussels) 18.jpg",
-    "author": "Olnnu",
-    "license": "CC BY-SA 3.0",
-    "size": 529267
+    "filename": "project-highway-interchange.jpg",
+    "url": "https://images.unsplash.com/photo-1498084393753-b411b2d26b34?auto=format&fit=crop&w=1400&q=80",
+    "title": "Highway-Connected Residential & Commercial Land Plots"
   },
   {
-    "slot": "expertise-road-transport.jpg",
-    "desc": "Road & Transportation - expressway paving",
-    "title": "File:Road construction in progress.jpg",
-    "author": "Jose Arukatty",
-    "license": "CC BY-SA 4.0",
-    "size": 465238
+    "filename": "expertise-infra-dev.jpg",
+    "url": "https://images.unsplash.com/photo-1500076656116-558758c991c1?auto=format&fit=crop&w=1400&q=80",
+    "title": "Master Site Planning and Residential Land Demarcation"
   },
   {
-    "slot": "expertise-commercial-dev.jpg",
-    "desc": "Commercial Development - logistics & heavy industrial yards",
-    "title": "File:Town Centre Redevelopment Works in Galashiels - geograph.org.uk - 247814.jpg",
-    "author": "Walter Baxter",
-    "license": "CC BY-SA 2.0",
-    "size": 86715
+    "filename": "expertise-civil-const.jpg",
+    "url": "https://images.unsplash.com/photo-1524813686514-a57563d77d66?auto=format&fit=crop&w=1400&q=80",
+    "title": "Individual Plot Demarcation and Boundary Stone Fixing"
   },
   {
-    "slot": "industry-commercial.jpg",
-    "desc": "Corporate Offices & Business Parks",
-    "title": "File:Bonn, Post-Tower -- 2017 -- 2136.jpg",
-    "author": "Dietmar Rabich",
-    "license": "CC BY-SA 4.0",
-    "size": 1271011
+    "filename": "expertise-building-const.jpg",
+    "url": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1400&q=80",
+    "title": "Gated Residential Township Layout Planning and Landscaping"
   },
   {
-    "slot": "industry-residential.jpg",
-    "desc": "Residential Developments",
-    "title": "File:5 floor - Residential building under construction - Nishapur 2.jpg",
-    "author": "Sonia Sevilla",
-    "license": "CC0",
-    "size": 997474
+    "filename": "expertise-road-transport.jpg",
+    "url": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1400&q=80",
+    "title": "Internal Sector Roads and Utility Corridor Development"
   },
   {
-    "slot": "industry-industrial.jpg",
-    "desc": "Industrial Facilities",
-    "title": "File:Factory Frontage - geograph.org.uk - 1302103.jpg",
-    "author": "David Lally",
-    "license": "CC BY-SA 2.0",
-    "size": 100667
+    "filename": "expertise-project-exec.jpg",
+    "url": "https://images.unsplash.com/photo-1508873696983-2df5703bc20d?auto=format&fit=crop&w=1400&q=80",
+    "title": "Aerial Drone Survey and Topographical Land Contouring"
   },
   {
-    "slot": "industry-transportation.jpg",
-    "desc": "Transportation Infrastructure",
-    "title": "File:Bangkok skytrain sunset.jpg",
-    "author": "User:Diliff",
-    "license": "CC BY-SA 3.0",
-    "size": 509487
+    "filename": "expertise-commercial-dev.jpg",
+    "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80",
+    "title": "Commercial Land Parcels and Mixed-Use Development Plots"
   },
   {
-    "slot": "industry-institutional.jpg",
-    "desc": "Institutional Infrastructure",
-    "title": "File:Brutalist architecture of UMass Dartmouth.jpg",
-    "author": "Kenneth C. Zirkel",
-    "license": "CC BY-SA 4.0",
-    "size": 424591
+    "filename": "industry-commercial.jpg",
+    "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=80",
+    "title": "Commercial Business Parks and Plotted Retail Corridors"
   },
   {
-    "slot": "industry-public-infra.jpg",
-    "desc": "Public Infrastructure - drainage & municipal water networks",
-    "title": "File:Drainage works near Wisketts wood - geograph.org.uk - 251136.jpg",
-    "author": "Mike Bovington",
-    "license": "CC BY-SA 2.0",
-    "size": 134794
+    "filename": "industry-residential.jpg",
+    "url": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1400&q=80",
+    "title": "Residential Plotted Communities and Gated Living Enclaves"
   },
   {
-    "slot": "fallback-construction.jpg",
-    "desc": "Default authentic construction fallback image",
-    "title": "File:Tottenham Hotspur Football Club new ground construction January 2018 01.jpg",
-    "author": "Acabashi",
-    "license": "CC BY-SA 4.0",
-    "size": 448162
+    "filename": "industry-industrial.jpg",
+    "url": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1400&q=80",
+    "title": "Industrial Land Parcels and Logistics Plotted Estates"
+  },
+  {
+    "filename": "industry-transportation.jpg",
+    "url": "https://images.unsplash.com/photo-1498084393753-b411b2d26b34?auto=format&fit=crop&w=1400&q=80",
+    "title": "Highway-Adjacent Strategic Plotted Real Estate"
+  },
+  {
+    "filename": "industry-institutional.jpg",
+    "url": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1400&q=80",
+    "title": "Institutional, Educational, and Healthcare Land Parcels"
+  },
+  {
+    "filename": "industry-public-infra.jpg",
+    "url": "https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?auto=format&fit=crop&w=1400&q=80",
+    "title": "Township Green Belts, Public Parks, and Community Infrastructure"
   }
 ]

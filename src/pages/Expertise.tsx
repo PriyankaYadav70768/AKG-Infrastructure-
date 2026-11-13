@@ -14,7 +14,7 @@ export const Expertise: React.FC = () => {
         <SafeImage
           src="/images/expertise-hero.jpg"
           fallbackSrc="/images/expertise-hero.jpg"
-          alt="AKG Infrastructure technical expertise"
+          alt="Aerial view of master planned land development and plot demarcations"
           className="w-full h-full object-cover opacity-85 absolute inset-0"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#142D45] via-[#142D45]/60 to-transparent" />

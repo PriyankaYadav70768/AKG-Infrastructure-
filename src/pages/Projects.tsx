@@ -30,7 +30,7 @@ export const Projects: React.FC = () => {
         <SafeImage
           src="/images/projects-hero.jpg"
           fallbackSrc="/images/projects-hero.jpg"
-          alt="AKG Infrastructure representative portfolio"
+          alt="Aerial view of plotted land developments and planned residential enclaves"
           className="w-full h-full object-cover opacity-85 absolute inset-0"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#142D45] via-[#142D45]/60 to-transparent" />

@@ -28,7 +28,7 @@ export const Hero: React.FC = () => {
         <SafeImage
           src="/images/hero-main.jpg"
           fallbackSrc="/images/hero-main.jpg"
-          alt="Large-scale infrastructure engineering and corridor execution"
+          alt="Aerial view of master planned residential plotting layout with organized internal roads"
           className="w-full h-full object-cover opacity-90 scale-[1.02] transition-transform duration-1000"
         />
         {/* Cinematic subtle dark gradient overlay for effortless typography legibility */}
@@ -133,7 +133,7 @@ export const EditorialIntroSection: React.FC = () => {
               <SafeImage
                 src="/images/intro-architecture.jpg"
                 fallbackSrc="/images/intro-architecture.jpg"
-                alt="AKG Infrastructure architectural and purposeful development"
+                alt="Surveyed residential plots and developed land layout with natural surroundings"
                 className="w-full h-[460px] sm:h-[540px] object-cover image-reveal"
               />
             </div>
@@ -398,7 +398,7 @@ export const DarkBrandExperienceSection: React.FC = () => {
               <SafeImage
                 src="/images/brand-experience.jpg"
                 fallbackSrc="/images/brand-experience.jpg"
-                alt="Active technical supervision and governance"
+                alt="Golden hour view over serene green plotted residential development"
                 className="w-full h-full object-cover opacity-85"
               />
             </div>
@@ -574,7 +574,7 @@ export const EditorialApproachSection: React.FC = () => {
               <SafeImage
                 src="/images/operational-framework.jpg"
                 fallbackSrc="/images/operational-framework.jpg"
-                alt="Disciplined on-site engineering and supervision activity"
+                alt="Technical land survey, contour mapping, and residential layout planning"
                 className="w-full h-[460px] sm:h-[540px] object-cover image-reveal"
               />
             </div>

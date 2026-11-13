@@ -13,7 +13,7 @@ export const About: React.FC = () => {
         <SafeImage
           src="/images/about-hero.jpg"
           fallbackSrc="/images/about-hero.jpg"
-          alt="AKG Infrastructure site execution and engineering"
+          alt="Planned residential land development and layout mapping"
           className="w-full h-full object-cover opacity-85 absolute inset-0"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#142D45] via-[#142D45]/60 to-transparent" />
@@ -52,7 +52,7 @@ export const About: React.FC = () => {
                 <SafeImage
                   src="/images/intro-architecture.jpg"
                   fallbackSrc="/images/intro-architecture.jpg"
-                  alt="Architectural development and engineering standards"
+                  alt="Demarcated residential land layout and plotted development"
                   className="w-full h-[440px] sm:h-[500px] object-cover image-reveal"
                 />
               </div>
