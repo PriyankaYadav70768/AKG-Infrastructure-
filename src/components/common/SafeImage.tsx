@@ -19,12 +19,17 @@ export const SafeImage: React.FC<SafeImageProps> = ({
 
   const activeSrc = hasError || !src ? fallbackSrc : src;
 
+  // If className has absolute inset-0 or w-full h-full, ensure the container fills parent properly
+  const isAbsolute = className.includes('absolute');
+  const isFullHeight = className.includes('h-full') || className.includes('h-[');
+  const defaultContainer = `${isAbsolute ? 'absolute inset-0' : ''} ${isFullHeight && !isAbsolute ? 'w-full h-full' : ''} ${containerClassName}`.trim();
+
   return (
-    <div className={`relative overflow-hidden ${containerClassName}`}>
+    <div className={`relative overflow-hidden ${defaultContainer}`}>
       {/* Loading Skeleton */}
       {isLoading && (
-        <div className="absolute inset-0 bg-[#F6F7F8] animate-pulse flex items-center justify-center z-0">
-          <div className="w-8 h-8 rounded-full border-2 border-[#234A70]/20 border-t-[#234A70] animate-spin" />
+        <div className="absolute inset-0 bg-[#F6F7F8] dark:bg-[#101E2E] animate-pulse flex items-center justify-center z-0">
+          <div className="w-8 h-8 rounded-full border-2 border-[#D4B07B]/30 border-t-[#D4B07B] animate-spin" />
         </div>
       )}
 

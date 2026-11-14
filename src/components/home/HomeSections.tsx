@@ -341,15 +341,16 @@ export const DominantProjectsSection: React.FC = () => {
                 src={FEATURED_PROJECTS[0].image}
                 fallbackSrc={FEATURED_PROJECTS[0].image}
                 alt={FEATURED_PROJECTS[0].title}
+                containerClassName="absolute inset-0 w-full h-full"
                 className="w-full h-full object-cover image-reveal"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
-              <div className="absolute top-6 left-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent z-10 pointer-events-none" />
+              <div className="absolute top-6 left-6 z-20">
                 <span className="px-3.5 py-1 text-[10px] font-bold tracking-[0.2em] uppercase bg-[#142D45]/90 text-white border border-[#B18A58]/40 font-sans">
                   {FEATURED_PROJECTS[0].category}
                 </span>
               </div>
-              <div className="absolute bottom-8 left-8 right-8 text-white">
+              <div className="absolute bottom-8 left-8 right-8 text-white z-20">
                 <p className="text-xs text-[#D4B07B] uppercase tracking-widest mb-1.5 font-sans font-semibold">
                   {FEATURED_PROJECTS[0].location}
                 </p>
@@ -377,10 +378,11 @@ export const DominantProjectsSection: React.FC = () => {
                 src={FEATURED_PROJECTS[1].image}
                 fallbackSrc={FEATURED_PROJECTS[1].image}
                 alt={FEATURED_PROJECTS[1].title}
-                className="w-full h-full object-cover image-reveal absolute inset-0"
+                containerClassName="absolute inset-0 w-full h-full"
+                className="w-full h-full object-cover image-reveal"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-              <div className="relative z-10">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10 pointer-events-none" />
+              <div className="relative z-20">
                 <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#D4B07B] block mb-2 font-sans">
                   {FEATURED_PROJECTS[1].category}
                 </span>
@@ -404,15 +406,16 @@ export const DominantProjectsSection: React.FC = () => {
 
         {/* Row 2: Secondary Editorial Pair */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <div className="group relative overflow-hidden h-[340px] sm:h-[380px] p-8 text-white flex flex-col justify-end">
+          <div className="group relative overflow-hidden h-[340px] sm:h-[380px] p-8 text-white flex flex-col justify-end shadow-lg">
             <SafeImage
               src={FEATURED_PROJECTS[2].image}
               fallbackSrc={FEATURED_PROJECTS[2].image}
               alt={FEATURED_PROJECTS[2].title}
-              className="w-full h-full object-cover image-reveal absolute inset-0"
+              containerClassName="absolute inset-0 w-full h-full"
+              className="w-full h-full object-cover image-reveal"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
-            <div className="relative z-10">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent z-10 pointer-events-none" />
+            <div className="relative z-20">
               <span className="text-[10px] font-bold tracking-widest text-[#D4B07B] uppercase block mb-1 font-sans">
                 {FEATURED_PROJECTS[2].category}
               </span>
@@ -425,15 +428,16 @@ export const DominantProjectsSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="group relative overflow-hidden h-[340px] sm:h-[380px] p-8 text-white flex flex-col justify-end">
+          <div className="group relative overflow-hidden h-[340px] sm:h-[380px] p-8 text-white flex flex-col justify-end shadow-lg">
             <SafeImage
               src={FEATURED_PROJECTS[3].image}
               fallbackSrc={FEATURED_PROJECTS[3].image}
               alt={FEATURED_PROJECTS[3].title}
-              className="w-full h-full object-cover image-reveal absolute inset-0"
+              containerClassName="absolute inset-0 w-full h-full"
+              className="w-full h-full object-cover image-reveal"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
-            <div className="relative z-10">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent z-10 pointer-events-none" />
+            <div className="relative z-20">
               <span className="text-[10px] font-bold tracking-widest text-[#D4B07B] uppercase block mb-1 font-sans">
                 {FEATURED_PROJECTS[3].category}
               </span>
