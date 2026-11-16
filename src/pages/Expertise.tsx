@@ -27,18 +27,16 @@ export const Expertise: React.FC = () => {
         <div className="absolute inset-0 bg-[#0A1828]/55 z-[1] pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0A1828]/80 via-transparent to-[#0A1828]/40 z-[1] pointer-events-none" />
 
-        {/* Foreground Content with Heading aligned to the right side */}
+        {/* Foreground Content with Heading aligned to the bottom-left */}
         <Container size="wide" className="relative z-10 w-full">
-          <div className="flex justify-end">
-            <ScrollReveal direction="up" distance={25} duration={750} className="max-w-2xl text-left md:text-left">
-              <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#D4B07B] block mb-3 font-sans drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                WHAT WE DO
-              </span>
-              <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-medium text-[#FAF9F6] leading-[1.05] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-                Our Engineering Expertise.
-              </h1>
-            </ScrollReveal>
-          </div>
+          <ScrollReveal direction="up" distance={25} duration={750} className="max-w-2xl text-left">
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#D4B07B] block mb-3 font-sans drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              WHAT WE DO
+            </span>
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-medium text-[#FAF9F6] leading-[1.05] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+              Our Engineering Expertise.
+            </h1>
+          </ScrollReveal>
         </Container>
       </section>
 
