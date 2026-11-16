@@ -24,20 +24,25 @@ export const About: React.FC = () => {
   return (
     <div className="bg-[#FAF9F6] dark:bg-[#0A121E]">
       {/* 1. Large Photographic Page Hero */}
-      <section className="relative h-[55vh] min-h-[440px] flex items-end pb-16 overflow-hidden bg-[#142D45] text-white">
+      <section className="relative h-[60vh] min-h-[480px] flex items-end pb-16 overflow-hidden bg-[#101E2E] text-white">
         <SafeImage
           src="/images/about/about-township.webp"
           fallbackSrc="/images/about-hero.jpg"
           alt="Planned residential land development and layout mapping in rural Uttar Pradesh"
-          className="w-full h-full object-cover opacity-85 absolute inset-0"
+          containerClassName="absolute inset-0 w-full h-full"
+          className="w-full h-full object-cover object-center transform scale-105 transition-transform duration-1000 ease-out"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#142D45] via-[#142D45]/60 to-transparent" />
+        {/* Layered cinematic gradients to guarantee both rich image visibility and text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#101E2E] via-[#101E2E]/50 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#101E2E]/85 via-[#101E2E]/40 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-black/20 pointer-events-none" />
+
         <Container size="wide" className="relative z-10">
           <ScrollReveal direction="up" distance={25} duration={750}>
-            <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#D4B07B] block mb-3 font-sans">
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#D4B07B] block mb-3 font-sans drop-shadow-sm">
               ABOUT AKG INFRASTRUCTURE
             </span>
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-medium text-[#FAF9F6] leading-[1.05] max-w-4xl">
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-medium text-[#FAF9F6] leading-[1.05] max-w-4xl drop-shadow-md">
               Rooted in the Land. Built for Generations.
             </h1>
           </ScrollReveal>
