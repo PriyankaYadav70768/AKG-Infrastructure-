@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Container } from '../common/Container';
 import { Button } from '../common/Button';
 import { SafeImage } from '../common/SafeImage';
+import { ScrollReveal } from '../common/ScrollReveal';
 import {
   EXPERTISE_LIST,
   FEATURED_PROJECTS,
@@ -175,7 +176,7 @@ export const EditorialIntroSection: React.FC = () => {
       <Container size="wide">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           {/* Left Column */}
-          <div className="lg:col-span-6 flex flex-col items-start space-y-6 text-left">
+          <ScrollReveal direction="up" distance={30} duration={750} className="lg:col-span-6 flex flex-col items-start space-y-6 text-left">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#B18A58] font-sans">
               WHO WE ARE
             </span>
@@ -201,10 +202,10 @@ export const EditorialIntroSection: React.FC = () => {
                 <ArrowRight className="w-4 h-4 text-[#B18A58]" />
               </Link>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right Column: Large Architectural Photograph (Natural proportions, generous whitespace) */}
-          <div className="lg:col-span-6">
+          <ScrollReveal direction="up" delay={150} distance={35} duration={800} className="lg:col-span-6">
             <div className="relative overflow-hidden rounded-none shadow-2xl border border-[#EAE6DF] dark:border-[#20272D] group">
               <SafeImage
                 src="/images/about/about-landscape.webp"
@@ -213,7 +214,7 @@ export const EditorialIntroSection: React.FC = () => {
                 className="w-full h-[460px] sm:h-[540px] object-cover image-reveal"
               />
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </Container>
     </section>
@@ -225,7 +226,7 @@ export const BrandStatementSection: React.FC = () => {
   return (
     <section className="py-24 lg:py-32 bg-[#EAE6DF]/60 dark:bg-[#101E2E] border-y border-[#EAE6DF] dark:border-[#1E293B]">
       <Container size="default">
-        <div className="text-center max-w-4xl mx-auto space-y-6">
+        <ScrollReveal direction="up" distance={25} duration={750} className="text-center max-w-4xl mx-auto space-y-6">
           <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#B18A58] font-sans">
             OUR CREED
           </span>
@@ -236,7 +237,7 @@ export const BrandStatementSection: React.FC = () => {
               Every lasting development begins with the right foundation.
             </span>”
           </h2>
-        </div>
+        </ScrollReveal>
       </Container>
     </section>
   );
@@ -249,7 +250,7 @@ export const ExpertiseSplitSection: React.FC = () => {
       <Container size="wide">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           {/* Left Column: Heading & Short Introduction */}
-          <div className="lg:col-span-5 flex flex-col items-start space-y-6 text-left lg:sticky lg:top-32 self-start">
+          <ScrollReveal direction="up" distance={30} duration={750} className="lg:col-span-5 flex flex-col items-start space-y-6 text-left lg:sticky lg:top-32 self-start">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#B18A58] font-sans">
               WHAT WE DO
             </span>
@@ -269,13 +270,17 @@ export const ExpertiseSplitSection: React.FC = () => {
               <span>EXPLORE ALL SERVICES</span>
               <ArrowRight className="w-4 h-4 text-[#B18A58]" />
             </Link>
-          </div>
+          </ScrollReveal>
 
           {/* Right Column: Refined Vertical Numbered List */}
           <div className="lg:col-span-7 divide-y divide-[#EAE6DF] dark:divide-[#20272D]">
-            {EXPERTISE_LIST.map((item) => (
-              <div
+            {EXPERTISE_LIST.map((item, index) => (
+              <ScrollReveal
                 key={item.id}
+                direction="up"
+                delay={index * 80}
+                distance={24}
+                duration={700}
                 className="py-8 sm:py-10 first:pt-0 last:pb-0 group transition-all duration-300 hover:pl-2"
               >
                 <div className="flex items-baseline gap-4 mb-2">
@@ -300,7 +305,7 @@ export const ExpertiseSplitSection: React.FC = () => {
                     <ArrowRight className="w-3.5 h-3.5 text-[#B18A58]" />
                   </Link>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -314,7 +319,7 @@ export const DominantProjectsSection: React.FC = () => {
   return (
     <section className="py-28 lg:py-36 bg-[#FAF9F6] dark:bg-[#0A121E] border-t border-[#EAE6DF] dark:border-[#1E293B]">
       <Container size="wide">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <ScrollReveal direction="up" distance={25} duration={700} className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#B18A58] font-sans block mb-3">
               REPRESENTATIVE WORK
@@ -330,12 +335,12 @@ export const DominantProjectsSection: React.FC = () => {
             <span>VIEW ALL PROJECTS</span>
             <ArrowRight className="w-4 h-4 text-[#B18A58]" />
           </Link>
-        </div>
+        </ScrollReveal>
 
         {/* Row 1: Dominant 65% Main Project Image + 35% Supporting Image */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-12">
           {/* Main 65% Feature */}
-          <div className="lg:col-span-8 group">
+          <ScrollReveal direction="up" distance={30} duration={800} className="lg:col-span-8 group">
             <div className="relative overflow-hidden h-[440px] sm:h-[520px] shadow-xl">
               <SafeImage
                 src={FEATURED_PROJECTS[0].image}
@@ -369,10 +374,10 @@ export const DominantProjectsSection: React.FC = () => {
                 </Link>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Supporting 35% Project */}
-          <div className="lg:col-span-4 group">
+          <ScrollReveal direction="up" delay={120} distance={30} duration={800} className="lg:col-span-4 group">
             <div className="relative overflow-hidden h-[440px] sm:h-[520px] shadow-xl flex flex-col justify-end p-8 text-white">
               <SafeImage
                 src={FEATURED_PROJECTS[1].image}
@@ -401,12 +406,12 @@ export const DominantProjectsSection: React.FC = () => {
                 </Link>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* Row 2: Secondary Editorial Pair */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <div className="group relative overflow-hidden h-[340px] sm:h-[380px] p-8 text-white flex flex-col justify-end shadow-lg">
+          <ScrollReveal direction="up" distance={30} duration={800} className="group relative overflow-hidden h-[340px] sm:h-[380px] p-8 text-white flex flex-col justify-end shadow-lg">
             <SafeImage
               src={FEATURED_PROJECTS[2].image}
               fallbackSrc={FEATURED_PROJECTS[2].image}
@@ -426,9 +431,9 @@ export const DominantProjectsSection: React.FC = () => {
                 {FEATURED_PROJECTS[2].description}
               </p>
             </div>
-          </div>
+          </ScrollReveal>
 
-          <div className="group relative overflow-hidden h-[340px] sm:h-[380px] p-8 text-white flex flex-col justify-end shadow-lg">
+          <ScrollReveal direction="up" delay={120} distance={30} duration={800} className="group relative overflow-hidden h-[340px] sm:h-[380px] p-8 text-white flex flex-col justify-end shadow-lg">
             <SafeImage
               src={FEATURED_PROJECTS[3].image}
               fallbackSrc={FEATURED_PROJECTS[3].image}
@@ -448,7 +453,7 @@ export const DominantProjectsSection: React.FC = () => {
                 {FEATURED_PROJECTS[3].description}
               </p>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </Container>
     </section>
@@ -461,7 +466,7 @@ export const DarkBrandExperienceSection: React.FC = () => {
     <section className="py-28 lg:py-36 bg-[#142D45] text-white relative overflow-hidden">
       <Container size="wide">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-16">
-          <div className="lg:col-span-7 space-y-6">
+          <ScrollReveal direction="up" distance={30} duration={800} className="lg:col-span-7 space-y-6">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#B18A58] font-sans">
               OUR COMMITMENT
             </span>
@@ -471,9 +476,9 @@ export const DarkBrandExperienceSection: React.FC = () => {
             <p className="text-base sm:text-lg text-gray-300 font-light leading-relaxed max-w-2xl font-sans">
               True development transcends immediate construction—it establishes the durable economic conduits, transit corridors, and institutional pillars upon which modern regional prosperity depends.
             </p>
-          </div>
+          </ScrollReveal>
 
-          <div className="lg:col-span-5">
+          <ScrollReveal direction="up" delay={150} distance={30} duration={800} className="lg:col-span-5">
             <div className="relative overflow-hidden border border-[#B18A58]/30 h-72 sm:h-80 shadow-2xl">
               <SafeImage
                 src="/images/home/aerial-township.webp"
@@ -482,13 +487,20 @@ export const DarkBrandExperienceSection: React.FC = () => {
                 className="w-full h-full object-cover opacity-90"
               />
             </div>
-          </div>
+          </ScrollReveal>
         </div>
 
         {/* 3 Principles as Large Editorial Text Blocks (Not Small Cards) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-12 border-t border-white/15">
-          {PHILOSOPHY_PRINCIPLES.map((principle) => (
-            <div key={principle.number} className="space-y-3">
+          {PHILOSOPHY_PRINCIPLES.map((principle, index) => (
+            <ScrollReveal
+              key={principle.number}
+              direction="up"
+              delay={index * 120}
+              distance={25}
+              duration={750}
+              className="space-y-3"
+            >
               <span className="font-serif text-3xl font-light text-[#B18A58]">
                 {principle.number}
               </span>
@@ -501,7 +513,7 @@ export const DarkBrandExperienceSection: React.FC = () => {
               <p className="text-sm text-gray-300 font-light leading-relaxed font-sans">
                 {principle.description}
               </p>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </Container>
@@ -514,7 +526,7 @@ export const EditorialIndustriesSection: React.FC = () => {
   return (
     <section className="py-28 lg:py-36 bg-[#FFFFFF] dark:bg-[#0F172A] border-t border-[#EAE6DF] dark:border-[#1E293B]">
       <Container size="wide">
-        <div className="max-w-2xl mb-16 text-left">
+        <ScrollReveal direction="up" distance={25} duration={700} className="max-w-2xl mb-16 text-left">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#B18A58] font-sans block mb-3">
             MARKET DIVERSITY
           </span>
@@ -524,12 +536,19 @@ export const EditorialIndustriesSection: React.FC = () => {
           <p className="text-base text-[#777C80] dark:text-[#A0A6AC] font-light mt-4 font-sans">
             Deploying domain-specific civil methodologies, precision structural design, and field management across all six vital sectors.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Row 1: Two Large Image-Led Items */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-          {INDUSTRIES_LIST.slice(0, 2).map((ind) => (
-            <div key={ind.id} className="group border border-[#EAE6DF] dark:border-[#20272D] overflow-hidden">
+          {INDUSTRIES_LIST.slice(0, 2).map((ind, index) => (
+            <ScrollReveal
+              key={ind.id}
+              direction="up"
+              delay={index * 120}
+              distance={30}
+              duration={750}
+              className="group border border-[#EAE6DF] dark:border-[#20272D] overflow-hidden"
+            >
               <div className="h-64 sm:h-80 overflow-hidden relative">
                 <SafeImage
                   src={ind.image}
@@ -559,12 +578,12 @@ export const EditorialIndustriesSection: React.FC = () => {
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* Row 2: One Wide Landscape Image Item */}
-        <div className="mb-8">
+        <ScrollReveal direction="up" distance={30} duration={800} className="mb-8">
           <div className="group border border-[#EAE6DF] dark:border-[#20272D] overflow-hidden grid grid-cols-1 lg:grid-cols-12 bg-[#FAF9F6] dark:bg-[#101E2E]">
             <div className="lg:col-span-7 h-72 sm:h-96 overflow-hidden relative">
               <SafeImage
@@ -603,12 +622,19 @@ export const EditorialIndustriesSection: React.FC = () => {
               </Link>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Row 3: Remaining 3 Categories (Transportation, Institutional, Public Infrastructure) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {INDUSTRIES_LIST.slice(3, 6).map((ind) => (
-            <div key={ind.id} className="group border border-[#EAE6DF] dark:border-[#20272D] overflow-hidden bg-[#FAF9F6] dark:bg-[#101E2E]">
+          {INDUSTRIES_LIST.slice(3, 6).map((ind, index) => (
+            <ScrollReveal
+              key={ind.id}
+              direction="up"
+              delay={index * 100}
+              distance={28}
+              duration={750}
+              className="group border border-[#EAE6DF] dark:border-[#20272D] overflow-hidden bg-[#FAF9F6] dark:bg-[#101E2E]"
+            >
               <div className="h-56 overflow-hidden relative">
                 <SafeImage
                   src={ind.image}
@@ -634,7 +660,7 @@ export const EditorialIndustriesSection: React.FC = () => {
                   <span>Explore &rarr;</span>
                 </Link>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </Container>
@@ -649,7 +675,7 @@ export const EditorialApproachSection: React.FC = () => {
       <Container size="wide">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           {/* Left: Large Engineering Activity Photograph */}
-          <div className="lg:col-span-6">
+          <ScrollReveal direction="up" distance={35} duration={800} className="lg:col-span-6">
             <div className="relative overflow-hidden shadow-2xl border border-[#EAE6DF] dark:border-[#20272D]">
               <SafeImage
                 src="/images/operational-framework.jpg"
@@ -658,10 +684,10 @@ export const EditorialApproachSection: React.FC = () => {
                 className="w-full h-[460px] sm:h-[540px] object-cover image-reveal"
               />
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right: Small Label, Large Heading, 3 Concise Principles, Explore Link */}
-          <div className="lg:col-span-6 flex flex-col items-start space-y-6 text-left">
+          <ScrollReveal direction="up" delay={150} distance={35} duration={850} className="lg:col-span-6 flex flex-col items-start space-y-6 text-left">
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#B18A58] font-sans">
               OUR APPROACH
             </span>
@@ -691,7 +717,7 @@ export const EditorialApproachSection: React.FC = () => {
                 <ArrowRight className="w-4 h-4 text-[#B18A58]" />
               </Link>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </Container>
     </section>
@@ -703,7 +729,7 @@ export const FinalClosingCTASection: React.FC = () => {
   return (
     <section className="py-28 lg:py-36 bg-[#142D45] text-white border-t border-[#20272D]">
       <Container size="default">
-        <div className="text-center space-y-6 max-w-3xl mx-auto">
+        <ScrollReveal direction="up" distance={30} duration={800} className="text-center space-y-6 max-w-3xl mx-auto">
           <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#B18A58] font-sans">
             GET IN TOUCH
           </span>
@@ -750,7 +776,7 @@ export const FinalClosingCTASection: React.FC = () => {
               6306917991
             </a>
           </div>
-        </div>
+        </ScrollReveal>
       </Container>
     </section>
   );

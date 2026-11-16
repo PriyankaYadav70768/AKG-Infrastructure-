@@ -7,6 +7,9 @@
     scroll-behavior: smooth;
     color: #1F242A;
     background-color: #FAF9F6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   html.dark {
@@ -20,6 +23,7 @@
     background-color: #FAF9F6;
     overflow-x: hidden;
     letter-spacing: -0.01em;
+    scroll-behavior: smooth;
   }
 
   .dark body {
@@ -32,14 +36,40 @@
     letter-spacing: -0.02em;
     font-weight: 600;
   }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF9F6;
+  }
+  .dark ::-webkit-scrollbar-track {
+    background: #0A121E;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D4B07B40;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B18A5880;
+  }
 }
 
 /* Subtle image reveal zoom */
 .image-reveal {
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
 }
 .image-reveal:hover {
-  transform: scale(1.035);
+  transform: scale(1.03);
+}
+
+/* Smooth card elevation and border transitions */
+.transition-smooth {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Custom focus ring */
