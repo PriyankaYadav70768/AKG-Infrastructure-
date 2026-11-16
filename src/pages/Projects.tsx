@@ -26,18 +26,25 @@ export const Projects: React.FC = () => {
 
   return (
     <div className="bg-[#FAF9F6] dark:bg-[#0A121E]">
-      {/* Large Page Heading & Hero */}
-      <section className="relative h-[48vh] min-h-[380px] flex items-end pb-14 overflow-hidden bg-[#142D45] text-white">
-        <SafeImage
-          src="/images/home/aerial-township.webp"
-          fallbackSrc="/images/projects-hero.jpg"
-          alt="Aerial view of plotted land developments and planned residential enclaves"
-          containerClassName="absolute inset-0 w-full h-full"
-          className="w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-[#0A1828]/55 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0A1828]/80 via-transparent to-[#0A1828]/40 pointer-events-none" />
-        <Container size="wide" className="relative z-10">
+      {/* Large Page Heading & Hero - Full Section Coverage */}
+      <section className="relative w-full h-[60vh] min-h-[460px] flex items-end pb-16 overflow-hidden bg-[#0A121E] text-white">
+        {/* Full-width and full-height background image */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <SafeImage
+            src="/images/home/aerial-township.webp"
+            fallbackSrc="/images/projects-hero.jpg"
+            alt="Aerial view of plotted land developments and planned residential enclaves"
+            containerClassName="w-full h-full"
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
+
+        {/* Subtle, uniform dark navy overlay across entire section for optimal contrast and readability */}
+        <div className="absolute inset-0 bg-[#0A1828]/55 z-[1] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0A1828]/80 via-transparent to-[#0A1828]/40 z-[1] pointer-events-none" />
+
+        {/* Foreground Content */}
+        <Container size="wide" className="relative z-10 w-full">
           <ScrollReveal direction="up" distance={25} duration={750}>
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#D4B07B] block mb-3 font-sans drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
               PORTFOLIO SHOWCASE
