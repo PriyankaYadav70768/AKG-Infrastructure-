@@ -8,23 +8,49 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export const Industries: React.FC = () => {
   return (
-    <div className="py-20 lg:py-28 bg-[#FAF9F6] dark:bg-[#0A121E]">
-      <Container size="wide">
-        <ScrollReveal direction="up" distance={25} duration={750}>
-          <div className="max-w-3xl mb-16">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#9E7844] block mb-3">
-              Sectors &amp; Applications
+    <div className="bg-[#FAF9F6] dark:bg-[#0A121E]">
+      {/* Cinematic Hero Section */}
+      <section className="relative h-[48vh] min-h-[380px] flex items-end pb-14 overflow-hidden bg-[#142D45] text-white">
+        <SafeImage
+          src="/images/industries/developed-properties.webp"
+          fallbackSrc="/images/industries-hero.jpg"
+          alt="Aerial view of industrial, commercial, and residential infrastructure developments"
+          containerClassName="absolute inset-0 w-full h-full"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[#0A1828]/55 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0A1828]/80 via-transparent to-[#0A1828]/40 pointer-events-none" />
+        <Container size="wide" className="relative z-10">
+          <ScrollReveal direction="up" distance={25} duration={750}>
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#D4B07B] block mb-3 font-sans drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              SECTORS &amp; APPLICATIONS
             </span>
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-medium text-[#132338] dark:text-[#F8FAFC] leading-[1.08] mb-6">
-              Industries We Serve
+            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-medium text-[#FAF9F6] leading-[1.05] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+              Industries We Serve.
             </h1>
-            <p className="text-lg sm:text-xl text-[#667080] dark:text-[#94A3B8] font-light leading-relaxed">
-              Tailoring civil methodology and structural design to the distinctive regulatory and operating conditions of each market sector.
-            </p>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
+        </Container>
+      </section>
 
-        {/* Sectors Grid */}
+      {/* Intro Description */}
+      <section className="py-20 lg:py-24 border-b border-[#EAE6DF] dark:border-[#1E293B]">
+        <Container size="wide">
+          <ScrollReveal direction="up" distance={20} duration={700}>
+            <div className="max-w-3xl space-y-4">
+              <h2 className="font-serif text-3xl sm:text-4xl font-medium text-[#142D45] dark:text-[#FAF9F6] leading-tight">
+                Engineering Solutions Engineered for Specific Sector Demands
+              </h2>
+              <p className="text-base sm:text-lg text-[#777C80] dark:text-[#A0A6AC] font-light leading-relaxed font-sans">
+                Tailoring civil methodology and structural design to the distinctive regulatory and operating conditions of each market sector.
+              </p>
+            </div>
+          </ScrollReveal>
+        </Container>
+      </section>
+
+      <div className="py-20 lg:py-28">
+        <Container size="wide">
+          {/* Sectors Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
           {INDUSTRIES_LIST.map((ind, idx) => (
             <ScrollReveal
@@ -100,6 +126,7 @@ export const Industries: React.FC = () => {
           </div>
         </ScrollReveal>
       </Container>
+      </div>
     </div>
   );
 };
