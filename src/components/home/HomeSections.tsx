@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowRight, ChevronDown, Compass, Shield, CheckCircle2, Building2, MapPin } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { ArrowRight, ChevronDown, ChevronLeft, ChevronRight, Compass, Shield, CheckCircle2, Building2, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Container } from '../common/Container';
 import { Button } from '../common/Button';
@@ -13,53 +13,94 @@ import {
   FAQS,
 } from '../../data/content';
 
-// SECTION 01 — FULL-SCREEN CINEMATIC HERO (75-90% Viewport Height) WITH AUTOMATIC IMAGE SLIDER
+// SECTION 01 — FULL-SCREEN CINEMATIC HERO SLIDER WITH DYNAMIC CONTENT & SLIDE TRANSITIONS
 const HERO_SLIDES = [
   {
     image: '/images/home/hero-slide-1.webp',
     fallback: '/images/hero-main.jpg',
     alt: 'Indian Village Residential Plotting with clean asphalt road, demarcated plots and village homes',
+    tag: 'RURAL RESIDENTIAL PLOTTING',
+    title: 'Building Foundations.',
+    highlight: 'Shaping Tomorrow.',
+    description: 'Engineering thoughtful infrastructure and plotted residential solutions through disciplined land planning, accurate boundary demarcation, and responsible execution.',
+    ctaPrimary: { text: 'EXPLORE OUR PROJECTS', path: '/projects' },
+    ctaSecondary: { text: 'DISCOVER OUR EXPERTISE', path: '/expertise' },
     label: 'Village Plotting'
   },
   {
     image: '/images/home/hero-slide-2.webp',
     fallback: '/images/expertise/residential-plots.webp',
     alt: 'Green Residential Plotting with boundary walls, green grass and black asphalt roads',
+    tag: 'MASTER-PLANNED TOWNSHIPS',
+    title: 'Rooted in the Land.',
+    highlight: 'Built for Families.',
+    description: 'Developing sustainable residential colonies with wide black-top roads, peaceful green surroundings, and complete statutory documentation across Uttar Pradesh.',
+    ctaPrimary: { text: 'VIEW AVAILABLE PLOTS', path: '/projects' },
+    ctaSecondary: { text: 'LEARN ABOUT AKG', path: '/about' },
     label: 'Green Plotting'
   },
   {
     image: '/images/home/hero-slide-3.webp',
     fallback: '/images/about/about-landscape.webp',
     alt: 'Developed Village Township with brick houses, road connectivity and open surroundings',
+    tag: 'CLEAR TITLE & DEMARCATION',
+    title: 'Secure Land Ownership.',
+    highlight: 'Zero Compromise.',
+    description: 'Every plot is delineated with permanent concrete pillars and red-brick boundary courses, pre-verified for immediate registry and possession readiness.',
+    ctaPrimary: { text: 'EXPLORE OUR SERVICES', path: '/expertise' },
+    ctaSecondary: { text: 'CONTACT ADVISORY', path: '/contact' },
     label: 'Village Township'
   },
   {
     image: '/images/home/hero-slide-4.webp',
     fallback: '/images/home/hero-township.webp',
     alt: 'Aerial View of Indian Plotting layout with clear boundaries and connecting asphalt roads',
+    tag: 'REGIONAL INFRASTRUCTURE',
+    title: 'Strategic Connectivity.',
+    highlight: 'Enduring Growth.',
+    description: 'Connecting serene village-side neighborhoods directly to major economic corridors, civic hubs, and highway arteries for generational prosperity.',
+    ctaPrimary: { text: 'VIEW PORTFOLIO', path: '/projects' },
+    ctaSecondary: { text: 'SCHEDULE SITE VISIT', path: '/contact' },
     label: 'Aerial View'
   }
 ];
 
 export const Hero: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Automatic crossfade rotation every 4.5 seconds
-  React.useEffect(() => {
-    const timer = setInterval(() => {
+  // Automatic transition every 5.5 seconds (paused on hover)
+  useEffect(() => {
+    if (isPaused) {
+      if (timerRef.current) clearInterval(timerRef.current);
+      return;
+    }
+
+    timerRef.current = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
-    }, 4500);
+    }, 5500);
 
-    return () => clearInterval(timer);
-  }, []);
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [isPaused]);
 
   // Preload upcoming slides into memory
-  React.useEffect(() => {
+  useEffect(() => {
     HERO_SLIDES.forEach((slide) => {
       const img = new Image();
       img.src = slide.image;
     });
   }, []);
+
+  const goToPrev = () => {
+    setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
+  };
+
+  const goToNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+  };
 
   const handleScrollDown = () => {
     const nextSection = document.getElementById('intro-section');
@@ -68,10 +109,16 @@ export const Hero: React.FC = () => {
     }
   };
 
+  const activeSlide = HERO_SLIDES[currentSlide];
+
   return (
-    <section className="relative min-h-[85vh] lg:min-h-[88vh] flex flex-col justify-between overflow-hidden bg-[#142D45] text-white">
-      {/* Background Automatic Crossfade Image Slider */}
-      <div className="absolute inset-0 z-0">
+    <section
+      className="relative min-h-[85vh] lg:min-h-[88vh] flex flex-col justify-between overflow-hidden bg-[#142D45] text-white select-none"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+      {/* Background Automatic Crossfade + Subtle Ken Burns Zoom Slider */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
         {HERO_SLIDES.map((slide, index) => {
           const isActive = index === currentSlide;
           return (
@@ -85,76 +132,107 @@ export const Hero: React.FC = () => {
                 src={slide.image}
                 fallbackSrc={slide.fallback}
                 alt={slide.alt}
-                className="w-full h-full object-cover object-center scale-[1.02] transition-transform duration-1000"
+                className={`w-full h-full object-cover object-center transition-transform duration-7000 ease-out ${
+                  isActive ? 'scale-[1.04]' : 'scale-100'
+                }`}
               />
             </div>
           );
         })}
-        {/* Cinematic subtle dark gradient overlay for effortless typography legibility */}
-        <div className="absolute inset-0 z-20 bg-gradient-to-r from-[#142D45]/90 via-[#142D45]/60 to-transparent pointer-events-none" />
-        <div className="absolute inset-0 z-20 bg-gradient-to-t from-[#142D45]/90 via-transparent to-black/30 pointer-events-none" />
+        {/* Subtle dark navy gradient overlays for effortless typography legibility */}
+        <div className="absolute inset-0 z-20 bg-gradient-to-r from-[#142D45]/92 via-[#142D45]/65 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 z-20 bg-gradient-to-t from-[#142D45]/90 via-transparent to-black/35 pointer-events-none" />
       </div>
 
-      {/* Main Content: Positioned toward lower-left / center-left */}
+      {/* Main Content with Animated Key Transitions */}
       <Container size="wide" className="relative z-30 my-auto pt-24 pb-12">
         <div className="max-w-3xl space-y-6 text-left">
-          {/* Small uppercase label */}
-          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-[#B18A58]/50 bg-[#142D45]/60 backdrop-blur-md text-[#D4B07B] text-[11px] font-bold tracking-[0.2em] uppercase font-sans">
+          {/* Animated Badge */}
+          <div
+            key={`tag-${currentSlide}`}
+            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-[#B18A58]/50 bg-[#142D45]/60 backdrop-blur-md text-[#D4B07B] text-[11px] font-bold tracking-[0.2em] uppercase font-sans animate-fadeIn"
+          >
             <span className="w-1.5 h-1.5 rounded-full bg-[#B18A58]" />
-            AKG INFRASTRUCTURE
+            {activeSlide.tag}
           </div>
 
-          {/* Large elegant serif display heading */}
-          <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-medium leading-[1.03] tracking-tight text-[#FAF9F6]">
-            Building Foundations. <br />
-            <span className="italic font-normal text-[#D4B07B]">Shaping Tomorrow.</span>
+          {/* Animated Display Heading */}
+          <h1
+            key={`title-${currentSlide}`}
+            className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-medium leading-[1.03] tracking-tight text-[#FAF9F6] animate-fadeInUp"
+          >
+            {activeSlide.title} <br />
+            <span className="italic font-normal text-[#D4B07B]">{activeSlide.highlight}</span>
           </h1>
 
-          {/* Supporting paragraph */}
-          <p className="text-base sm:text-lg lg:text-xl text-gray-200 font-light leading-relaxed max-w-2xl font-sans">
-            Engineering thoughtful infrastructure and development solutions through disciplined planning, technical excellence and responsible execution.
+          {/* Animated Supporting Paragraph */}
+          <p
+            key={`desc-${currentSlide}`}
+            className="text-base sm:text-lg lg:text-xl text-gray-200 font-light leading-relaxed max-w-2xl font-sans animate-fadeIn"
+          >
+            {activeSlide.description}
           </p>
 
-          {/* Two CTAs: EXPLORE OUR PROJECTS & DISCOVER OUR EXPERTISE */}
+          {/* Two Interactive CTAs */}
           <div className="flex flex-wrap items-center gap-4 pt-4">
             <Link
-              to="/projects"
+              to={activeSlide.ctaPrimary.path}
               className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest text-[#142D45] bg-[#FAF9F6] hover:bg-[#FAF9F6]/90 transition-all shadow-md hover:shadow-lg active:scale-[0.98] font-sans"
             >
-              <span>EXPLORE OUR PROJECTS</span>
+              <span>{activeSlide.ctaPrimary.text}</span>
               <ArrowRight className="w-4 h-4 text-[#B18A58]" />
             </Link>
 
             <Link
-              to="/expertise"
+              to={activeSlide.ctaSecondary.path}
               className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest text-[#FAF9F6] border border-white/40 hover:border-white hover:bg-white/10 transition-all active:scale-[0.98] font-sans"
             >
-              <span>DISCOVER OUR EXPERTISE</span>
+              <span>{activeSlide.ctaSecondary.text}</span>
             </Link>
           </div>
         </div>
       </Container>
 
-      {/* Navigation Controls: Slide Indicators (4 Dots) & Scroll Down */}
+      {/* Slider Controls: Arrow Buttons, 4 Indicators & Scroll Down */}
       <div className="relative z-30 pb-8 flex flex-col items-center justify-center gap-4">
-        {/* 4 Interactive Dots for Slider */}
-        <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-[#142D45]/70 backdrop-blur-md border border-[#B18A58]/30">
-          {HERO_SLIDES.map((slide, idx) => (
-            <button
-              key={slide.label}
-              type="button"
-              onClick={() => setCurrentSlide(idx)}
-              aria-label={`Switch to slide ${idx + 1}: ${slide.label}`}
-              className={`transition-all duration-300 rounded-full cursor-pointer focus:outline-hidden ${
-                idx === currentSlide
-                  ? 'w-6 h-2 bg-[#D4B07B]'
-                  : 'w-2 h-2 bg-white/40 hover:bg-white/80'
-              }`}
-            />
-          ))}
+        {/* Navigation Bar with Previous/Next Arrows & Interactive Dots */}
+        <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#142D45]/75 backdrop-blur-md border border-[#B18A58]/30 shadow-lg">
+          <button
+            type="button"
+            onClick={goToPrev}
+            aria-label="Previous slide"
+            className="text-white/60 hover:text-white transition-colors cursor-pointer p-1 focus:outline-hidden"
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </button>
+
+          <div className="flex items-center gap-2 px-1">
+            {HERO_SLIDES.map((slide, idx) => (
+              <button
+                key={slide.label}
+                type="button"
+                onClick={() => setCurrentSlide(idx)}
+                aria-label={`Switch to slide ${idx + 1}: ${slide.label}`}
+                className={`transition-all duration-300 rounded-full cursor-pointer focus:outline-hidden ${
+                  idx === currentSlide
+                    ? 'w-7 h-2 bg-[#D4B07B]'
+                    : 'w-2 h-2 bg-white/40 hover:bg-white/80'
+                }`}
+              />
+            ))}
+          </div>
+
+          <button
+            type="button"
+            onClick={goToNext}
+            aria-label="Next slide"
+            className="text-white/60 hover:text-white transition-colors cursor-pointer p-1 focus:outline-hidden"
+          >
+            <ChevronRight className="w-4 h-4" />
+          </button>
         </div>
 
-        {/* Scroll Indicator */}
+        {/* Scroll Down Indicator */}
         <button
           type="button"
           onClick={handleScrollDown}
@@ -314,12 +392,28 @@ export const ExpertiseSplitSection: React.FC = () => {
   );
 };
 
-// SECTION 05 — FEATURED PROJECTS (Dominant Editorial Gallery with 65% Main Image & Supporting Image)
+// SECTION 05 — FEATURED PROJECTS (Dominant Editorial Gallery with Interactive Category Filters)
 export const DominantProjectsSection: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+
+  const categories = [
+    'All',
+    'Transportation Infrastructure',
+    'Commercial Development',
+    'Building Construction',
+    'Civil Construction',
+    'Road & Transportation',
+  ];
+
+  const filteredProjects =
+    selectedCategory === 'All'
+      ? FEATURED_PROJECTS
+      : FEATURED_PROJECTS.filter((p) => p.category === selectedCategory);
+
   return (
     <section className="py-28 lg:py-36 bg-[#FAF9F6] dark:bg-[#0A121E] border-t border-[#EAE6DF] dark:border-[#1E293B]">
       <Container size="wide">
-        <ScrollReveal direction="up" distance={25} duration={700} className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <ScrollReveal direction="up" distance={25} duration={700} className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
           <div>
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#B18A58] font-sans block mb-3">
               REPRESENTATIVE WORK
@@ -337,124 +431,194 @@ export const DominantProjectsSection: React.FC = () => {
           </Link>
         </ScrollReveal>
 
-        {/* Row 1: Dominant 65% Main Project Image + 35% Supporting Image */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-12">
-          {/* Main 65% Feature */}
-          <ScrollReveal direction="up" distance={30} duration={800} className="lg:col-span-8 group">
-            <div className="relative overflow-hidden h-[440px] sm:h-[520px] shadow-xl">
-              <SafeImage
-                src={FEATURED_PROJECTS[0].image}
-                fallbackSrc={FEATURED_PROJECTS[0].image}
-                alt={FEATURED_PROJECTS[0].title}
-                containerClassName="absolute inset-0 w-full h-full"
-                className="w-full h-full object-cover image-reveal"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent z-10 pointer-events-none" />
-              <div className="absolute top-6 left-6 z-20">
-                <span className="px-3.5 py-1 text-[10px] font-bold tracking-[0.2em] uppercase bg-[#142D45]/90 text-white border border-[#B18A58]/40 font-sans">
-                  {FEATURED_PROJECTS[0].category}
-                </span>
-              </div>
-              <div className="absolute bottom-8 left-8 right-8 text-white z-20">
-                <p className="text-xs text-[#D4B07B] uppercase tracking-widest mb-1.5 font-sans font-semibold">
-                  {FEATURED_PROJECTS[0].location}
-                </p>
-                <h3 className="font-serif text-3xl sm:text-4xl font-medium mb-2 leading-snug">
-                  {FEATURED_PROJECTS[0].title}
-                </h3>
-                <p className="text-sm text-gray-200 line-clamp-2 max-w-2xl font-light font-sans mb-4">
-                  {FEATURED_PROJECTS[0].description}
-                </p>
-                <Link
-                  to="/projects"
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#D4B07B] hover:text-white transition-colors font-sans"
-                >
-                  <span>VIEW PROJECT DETAILS</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-          </ScrollReveal>
+        {/* Project Category Filter Tabs */}
+        <ScrollReveal direction="up" delay={80} distance={20} duration={600} className="mb-12">
+          <div className="flex flex-wrap items-center gap-2 pb-2">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                type="button"
+                onClick={() => setSelectedCategory(cat)}
+                className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 font-sans cursor-pointer ${
+                  selectedCategory === cat
+                    ? 'bg-[#142D45] text-white dark:bg-[#D4B07B] dark:text-[#142D45] shadow-sm'
+                    : 'bg-white dark:bg-[#101E2E] text-[#142D45] dark:text-[#E6EAF0] border border-[#EAE6DF] dark:border-[#20272D] hover:border-[#B18A58]/60'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        </ScrollReveal>
 
-          {/* Supporting 35% Project */}
-          <ScrollReveal direction="up" delay={120} distance={30} duration={800} className="lg:col-span-4 group">
-            <div className="relative overflow-hidden h-[440px] sm:h-[520px] shadow-xl flex flex-col justify-end p-8 text-white">
-              <SafeImage
-                src={FEATURED_PROJECTS[1].image}
-                fallbackSrc={FEATURED_PROJECTS[1].image}
-                alt={FEATURED_PROJECTS[1].title}
-                containerClassName="absolute inset-0 w-full h-full"
-                className="w-full h-full object-cover image-reveal"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10 pointer-events-none" />
-              <div className="relative z-20">
-                <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#D4B07B] block mb-2 font-sans">
-                  {FEATURED_PROJECTS[1].category}
-                </span>
-                <h3 className="font-serif text-2xl font-medium mb-2 leading-snug">
-                  {FEATURED_PROJECTS[1].title}
-                </h3>
-                <p className="text-xs text-gray-300 line-clamp-3 font-light font-sans mb-4">
-                  {FEATURED_PROJECTS[1].description}
-                </p>
-                <Link
-                  to="/projects"
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#D4B07B] hover:text-white transition-colors font-sans"
-                >
-                  <span>VIEW PROJECT</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
+        {/* Dynamic Project Cards Grid with Smooth Transition */}
+        {filteredProjects.length === 0 ? (
+          <div className="py-16 text-center text-[#777C80] dark:text-[#A0A6AC] font-sans">
+            No projects found in this category.
+          </div>
+        ) : filteredProjects.length >= 4 && selectedCategory === 'All' ? (
+          <>
+            {/* Row 1: Dominant 65% Main Project Image + 35% Supporting Image */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-8">
+              {/* Main 65% Feature */}
+              <ScrollReveal direction="up" distance={30} duration={800} className="lg:col-span-8 group">
+                <div className="relative overflow-hidden h-[440px] sm:h-[520px] shadow-xl">
+                  <SafeImage
+                    src={filteredProjects[0].image}
+                    fallbackSrc={filteredProjects[0].image}
+                    alt={filteredProjects[0].title}
+                    containerClassName="absolute inset-0 w-full h-full"
+                    className="w-full h-full object-cover image-reveal"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent z-10 pointer-events-none" />
+                  <div className="absolute top-6 left-6 z-20">
+                    <span className="px-3.5 py-1 text-[10px] font-bold tracking-[0.2em] uppercase bg-[#142D45]/90 text-white border border-[#B18A58]/40 font-sans">
+                      {filteredProjects[0].category}
+                    </span>
+                  </div>
+                  <div className="absolute bottom-8 left-8 right-8 text-white z-20">
+                    <p className="text-xs text-[#D4B07B] uppercase tracking-widest mb-1.5 font-sans font-semibold">
+                      {filteredProjects[0].location}
+                    </p>
+                    <h3 className="font-serif text-3xl sm:text-4xl font-medium mb-2 leading-snug">
+                      {filteredProjects[0].title}
+                    </h3>
+                    <p className="text-sm text-gray-200 line-clamp-2 max-w-2xl font-light font-sans mb-4">
+                      {filteredProjects[0].description}
+                    </p>
+                    <Link
+                      to="/projects"
+                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#D4B07B] hover:text-white transition-colors font-sans"
+                    >
+                      <span>VIEW PROJECT DETAILS</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              </ScrollReveal>
 
-        {/* Row 2: Secondary Editorial Pair */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-          <ScrollReveal direction="up" distance={30} duration={800} className="group relative overflow-hidden h-[340px] sm:h-[380px] p-8 text-white flex flex-col justify-end shadow-lg">
-            <SafeImage
-              src={FEATURED_PROJECTS[2].image}
-              fallbackSrc={FEATURED_PROJECTS[2].image}
-              alt={FEATURED_PROJECTS[2].title}
-              containerClassName="absolute inset-0 w-full h-full"
-              className="w-full h-full object-cover image-reveal"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent z-10 pointer-events-none" />
-            <div className="relative z-20">
-              <span className="text-[10px] font-bold tracking-widest text-[#D4B07B] uppercase block mb-1 font-sans">
-                {FEATURED_PROJECTS[2].category}
-              </span>
-              <h3 className="font-serif text-2xl font-medium mb-1">
-                {FEATURED_PROJECTS[2].title}
-              </h3>
-              <p className="text-xs text-gray-300 font-light font-sans line-clamp-2">
-                {FEATURED_PROJECTS[2].description}
-              </p>
+              {/* Supporting 35% Project */}
+              <ScrollReveal direction="up" delay={120} distance={30} duration={800} className="lg:col-span-4 group">
+                <div className="relative overflow-hidden h-[440px] sm:h-[520px] shadow-xl flex flex-col justify-end p-8 text-white">
+                  <SafeImage
+                    src={filteredProjects[1].image}
+                    fallbackSrc={filteredProjects[1].image}
+                    alt={filteredProjects[1].title}
+                    containerClassName="absolute inset-0 w-full h-full"
+                    className="w-full h-full object-cover image-reveal"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10 pointer-events-none" />
+                  <div className="relative z-20">
+                    <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#D4B07B] block mb-2 font-sans">
+                      {filteredProjects[1].category}
+                    </span>
+                    <h3 className="font-serif text-2xl font-medium mb-2 leading-snug">
+                      {filteredProjects[1].title}
+                    </h3>
+                    <p className="text-xs text-gray-300 line-clamp-3 font-light font-sans mb-4">
+                      {filteredProjects[1].description}
+                    </p>
+                    <Link
+                      to="/projects"
+                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#D4B07B] hover:text-white transition-colors font-sans"
+                    >
+                      <span>VIEW PROJECT</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              </ScrollReveal>
             </div>
-          </ScrollReveal>
 
-          <ScrollReveal direction="up" delay={120} distance={30} duration={800} className="group relative overflow-hidden h-[340px] sm:h-[380px] p-8 text-white flex flex-col justify-end shadow-lg">
-            <SafeImage
-              src={FEATURED_PROJECTS[3].image}
-              fallbackSrc={FEATURED_PROJECTS[3].image}
-              alt={FEATURED_PROJECTS[3].title}
-              containerClassName="absolute inset-0 w-full h-full"
-              className="w-full h-full object-cover image-reveal"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent z-10 pointer-events-none" />
-            <div className="relative z-20">
-              <span className="text-[10px] font-bold tracking-widest text-[#D4B07B] uppercase block mb-1 font-sans">
-                {FEATURED_PROJECTS[3].category}
-              </span>
-              <h3 className="font-serif text-2xl font-medium mb-1">
-                {FEATURED_PROJECTS[3].title}
-              </h3>
-              <p className="text-xs text-gray-300 font-light font-sans line-clamp-2">
-                {FEATURED_PROJECTS[3].description}
-              </p>
+            {/* Row 2: Secondary Editorial Pair */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <ScrollReveal direction="up" distance={30} duration={800} className="group relative overflow-hidden h-[340px] sm:h-[380px] p-8 text-white flex flex-col justify-end shadow-lg">
+                <SafeImage
+                  src={filteredProjects[2].image}
+                  fallbackSrc={filteredProjects[2].image}
+                  alt={filteredProjects[2].title}
+                  containerClassName="absolute inset-0 w-full h-full"
+                  className="w-full h-full object-cover image-reveal"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent z-10 pointer-events-none" />
+                <div className="relative z-20">
+                  <span className="text-[10px] font-bold tracking-widest text-[#D4B07B] uppercase block mb-1 font-sans">
+                    {filteredProjects[2].category}
+                  </span>
+                  <h3 className="font-serif text-2xl font-medium mb-1">
+                    {filteredProjects[2].title}
+                  </h3>
+                  <p className="text-xs text-gray-300 font-light font-sans line-clamp-2">
+                    {filteredProjects[2].description}
+                  </p>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal direction="up" delay={120} distance={30} duration={800} className="group relative overflow-hidden h-[340px] sm:h-[380px] p-8 text-white flex flex-col justify-end shadow-lg">
+                <SafeImage
+                  src={filteredProjects[3].image}
+                  fallbackSrc={filteredProjects[3].image}
+                  alt={filteredProjects[3].title}
+                  containerClassName="absolute inset-0 w-full h-full"
+                  className="w-full h-full object-cover image-reveal"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent z-10 pointer-events-none" />
+                <div className="relative z-20">
+                  <span className="text-[10px] font-bold tracking-widest text-[#D4B07B] uppercase block mb-1 font-sans">
+                    {filteredProjects[3].category}
+                  </span>
+                  <h3 className="font-serif text-2xl font-medium mb-1">
+                    {filteredProjects[3].title}
+                  </h3>
+                  <p className="text-xs text-gray-300 font-light font-sans line-clamp-2">
+                    {filteredProjects[3].description}
+                  </p>
+                </div>
+              </ScrollReveal>
             </div>
-          </ScrollReveal>
-        </div>
+          </>
+        ) : (
+          /* Filtered Category Grid */
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProjects.map((project, idx) => (
+              <ScrollReveal
+                key={project.id}
+                direction="up"
+                delay={idx * 80}
+                distance={25}
+                duration={750}
+                className="group relative overflow-hidden h-[380px] p-8 text-white flex flex-col justify-end shadow-lg"
+              >
+                <SafeImage
+                  src={project.image}
+                  fallbackSrc={project.image}
+                  alt={project.title}
+                  containerClassName="absolute inset-0 w-full h-full"
+                  className="w-full h-full object-cover image-reveal"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10 pointer-events-none" />
+                <div className="relative z-20">
+                  <span className="text-[10px] font-bold tracking-widest text-[#D4B07B] uppercase block mb-1 font-sans">
+                    {project.category}
+                  </span>
+                  <h3 className="font-serif text-2xl font-medium mb-1">
+                    {project.title}
+                  </h3>
+                  <p className="text-xs text-gray-300 font-light font-sans line-clamp-2 mb-3">
+                    {project.description}
+                  </p>
+                  <Link
+                    to="/projects"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#D4B07B] hover:text-white transition-colors font-sans"
+                  >
+                    <span>View Project</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        )}
       </Container>
     </section>
   );
