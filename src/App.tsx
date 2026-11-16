@@ -13,6 +13,7 @@ import { Industries } from './pages/Industries';
 import { Contact } from './pages/Contact';
 import { Login } from './pages/Login';
 import { NotFound } from './pages/NotFound';
+import { PageTransition } from './components/common/PageTransition';
 
 // Scroll to top helper on navigation
 const ScrollToTop = () => {
@@ -33,7 +34,11 @@ const AppLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen bg-[#FAF9F6] dark:bg-[#0A121E] text-[#1F242A] dark:text-[#E6EAF0] transition-colors duration-200">
       <Header />
-      <main className="flex-grow flex flex-col">{children}</main>
+      <main className="flex-grow flex flex-col">
+        <PageTransition>
+          {children}
+        </PageTransition>
+      </main>
       {!isAuthPage && <Footer />}
     </div>
   );
