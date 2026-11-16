@@ -27,7 +27,7 @@ export const Projects: React.FC = () => {
   return (
     <div className="bg-[#FAF9F6] dark:bg-[#0A121E]">
       {/* Large Page Heading & Hero - Full Section Coverage */}
-      <section className="relative w-full h-[60vh] min-h-[460px] flex items-end pb-16 overflow-hidden bg-[#0A121E] text-white">
+      <section className="relative w-full h-[50vh] sm:h-[55vh] lg:h-[60vh] min-h-[400px] sm:min-h-[440px] lg:min-h-[460px] flex items-end pb-10 sm:pb-14 lg:pb-16 overflow-hidden bg-[#0A121E] text-white">
         {/* Full-width and full-height background image */}
         <div className="absolute inset-0 w-full h-full z-0">
           <SafeImage
@@ -46,10 +46,10 @@ export const Projects: React.FC = () => {
         {/* Foreground Content */}
         <Container size="wide" className="relative z-10 w-full">
           <ScrollReveal direction="up" distance={25} duration={750}>
-            <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#D4B07B] block mb-3 font-sans drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+            <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.22em] sm:tracking-[0.25em] text-[#D4B07B] block mb-2.5 sm:mb-3 font-sans drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
               PORTFOLIO SHOWCASE
             </span>
-            <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-medium text-[#FAF9F6] leading-[1.05] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+            <h1 className="font-serif text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium text-[#FAF9F6] leading-[1.08] sm:leading-[1.05] drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] break-words">
               Infrastructure &amp; Civil Works.
             </h1>
           </ScrollReveal>

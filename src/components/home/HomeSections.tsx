@@ -159,7 +159,7 @@ export const Hero: React.FC = () => {
           {/* Animated Display Heading */}
           <h1
             key={`title-${currentSlide}`}
-            className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-medium leading-[1.03] tracking-tight text-[#FAF9F6] animate-fadeInUp"
+            className="font-serif text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-medium leading-[1.06] sm:leading-[1.03] tracking-tight text-[#FAF9F6] animate-fadeInUp break-words"
           >
             {activeSlide.title} <br />
             <span className="italic font-normal text-[#D4B07B]">{activeSlide.highlight}</span>
@@ -168,16 +168,16 @@ export const Hero: React.FC = () => {
           {/* Animated Supporting Paragraph */}
           <p
             key={`desc-${currentSlide}`}
-            className="text-base sm:text-lg lg:text-xl text-gray-200 font-light leading-relaxed max-w-2xl font-sans animate-fadeIn"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 font-light leading-relaxed max-w-2xl font-sans animate-fadeIn"
           >
             {activeSlide.description}
           </p>
 
           {/* Two Interactive CTAs */}
-          <div className="flex flex-wrap items-center gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-3 sm:pt-4">
             <Link
               to={activeSlide.ctaPrimary.path}
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest text-[#142D45] bg-[#FAF9F6] hover:bg-[#FAF9F6]/90 transition-all shadow-md hover:shadow-lg active:scale-[0.98] font-sans"
+              className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs font-bold uppercase tracking-widest text-[#142D45] bg-[#FAF9F6] hover:bg-[#FAF9F6]/90 transition-all shadow-md hover:shadow-lg active:scale-[0.98] font-sans text-center"
             >
               <span>{activeSlide.ctaPrimary.text}</span>
               <ArrowRight className="w-4 h-4 text-[#B18A58]" />
@@ -185,7 +185,7 @@ export const Hero: React.FC = () => {
 
             <Link
               to={activeSlide.ctaSecondary.path}
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest text-[#FAF9F6] border border-white/40 hover:border-white hover:bg-white/10 transition-all active:scale-[0.98] font-sans"
+              className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs font-bold uppercase tracking-widest text-[#FAF9F6] border border-white/40 hover:border-white hover:bg-white/10 transition-all active:scale-[0.98] font-sans text-center"
             >
               <span>{activeSlide.ctaSecondary.text}</span>
             </Link>

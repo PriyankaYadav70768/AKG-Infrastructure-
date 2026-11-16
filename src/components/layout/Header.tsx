@@ -68,7 +68,7 @@ export const Header: React.FC = () => {
             </nav>
 
             {/* Right: Quick Inquiry Callout + Theme Toggle + LOGIN / JOIN */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               {/* Inquiry Phone Pill (Editorial Touch inspired by KHU Developers) */}
               <a
                 href="tel:6306917991"
@@ -85,7 +85,7 @@ export const Header: React.FC = () => {
               {/* Mandatory Prominent Login/Join Button */}
               <Link
                 to="/login"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase text-white bg-[#132338] hover:bg-[#070E18] dark:bg-[#1E3A5F] dark:hover:bg-[#162E4D] transition-all duration-200 shadow-xs hover:shadow active:scale-[0.98] border border-[#132338] dark:border-[#263548] focus-ring"
+                className="hidden sm:inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs font-bold tracking-wider uppercase text-white bg-[#132338] hover:bg-[#070E18] dark:bg-[#1E3A5F] dark:hover:bg-[#162E4D] transition-all duration-200 shadow-xs hover:shadow active:scale-[0.98] border border-[#132338] dark:border-[#263548] focus-ring shrink-0"
               >
                 <span>LOGIN / JOIN</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#D4B07B] transition-transform group-hover:translate-x-0.5" />
@@ -95,7 +95,7 @@ export const Header: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden p-2 rounded-lg text-[#1F242A] dark:text-[#E2E8F0] hover:bg-black/5 dark:hover:bg-white/5 border border-[#E8E6E1] dark:border-[#2D3748]"
+                className="lg:hidden p-2 rounded-lg text-[#1F242A] dark:text-[#E2E8F0] hover:bg-black/5 dark:hover:bg-white/5 border border-[#E8E6E1] dark:border-[#2D3748] shrink-0"
                 aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
                 aria-expanded={mobileMenuOpen}
               >
