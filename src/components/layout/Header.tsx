@@ -26,10 +26,10 @@ export const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`sticky top-0 z-40 w-full transition-all duration-300 ${
+        className={`sticky top-0 z-50 w-full bg-[#FAF9F6] dark:bg-[#0A121E] transition-all duration-200 border-b ${
           isScrolled
-            ? 'bg-[#FAF9F6]/95 dark:bg-[#0A121E]/95 backdrop-blur-md py-3 border-b border-[#E8E6E1] dark:border-[#1E293B] shadow-xs'
-            : 'bg-transparent py-5 border-b border-[#E8E6E1]/60 dark:border-[#1E293B]/60'
+            ? 'py-3 border-[#E8E6E1] dark:border-[#1E293B] shadow-sm'
+            : 'py-4 sm:py-5 border-[#E8E6E1]/60 dark:border-[#1E293B]/60'
         }`}
       >
         <Container size="wide">
