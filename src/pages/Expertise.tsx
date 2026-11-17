@@ -95,13 +95,19 @@ export const Expertise: React.FC = () => {
                         </div>
                       </div>
 
-                      <div className="pt-4">
+                      <div className="pt-4 flex flex-wrap items-center gap-4">
+                        <Link
+                          to={`/expertise/${item.id}`}
+                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-[#132338] dark:bg-[#1E3A5F] hover:bg-[#070E18] transition-all font-sans shadow-xs"
+                        >
+                          <span>EXPLORE DOMAIN</span>
+                          <ArrowRight className="w-3.5 h-3.5 text-[#D4B07B]" />
+                        </Link>
                         <Link
                           to="/contact"
-                          className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#142D45] dark:text-[#D4B07B] border-b-2 border-[#B18A58] pb-1 hover:text-[#B18A58] transition-colors font-sans"
+                          className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#142D45] dark:text-[#D4B07B] border-b border-[#B18A58] pb-1 hover:text-[#B18A58] transition-colors font-sans"
                         >
-                          <span>INQUIRE ON THIS DOMAIN</span>
-                          <ArrowRight className="w-4 h-4 text-[#B18A58]" />
+                          <span>INQUIRE</span>
                         </Link>
                       </div>
                     </ScrollReveal>

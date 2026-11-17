@@ -53,6 +53,33 @@ export const About: React.FC = () => {
         </Container>
       </section>
 
+      {/* Dedicated Topic Quick-Link Tabs */}
+      <section className="bg-white dark:bg-[#0F172A] border-b border-[#E8E6E1] dark:border-[#1E293B] py-5 sticky top-[69px] z-20 backdrop-blur-md bg-white/95 dark:bg-[#0F172A]/95 shadow-xs">
+        <Container size="wide">
+          <div className="flex items-center gap-2 overflow-x-auto scrollbar-none font-sans text-xs">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-[#9E7844] mr-2 shrink-0">
+              EXPLORE TOPICS:
+            </span>
+            {[
+              { slug: 'company-overview', label: 'Company Overview' },
+              { slug: 'our-story', label: 'Our Story' },
+              { slug: 'mission', label: 'Mission' },
+              { slug: 'vision', label: 'Vision' },
+              { slug: 'our-values', label: 'Our Values' },
+              { slug: 'why-choose-akg', label: 'Why Choose AKG' },
+            ].map((topic) => (
+              <Link
+                key={topic.slug}
+                to={`/about/${topic.slug}`}
+                className="px-3.5 py-1.5 rounded-full border border-[#E8E6E1] dark:border-[#20272D] hover:border-[#9E7844] hover:text-[#9E7844] dark:hover:text-[#D4B07B] transition-colors shrink-0 font-medium text-[#132338] dark:text-[#E2E8F0]"
+              >
+                {topic.label} &rarr;
+              </Link>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       {/* 2. Company Overview & Who We Are */}
       <section className="py-24 lg:py-32">
         <Container size="wide">

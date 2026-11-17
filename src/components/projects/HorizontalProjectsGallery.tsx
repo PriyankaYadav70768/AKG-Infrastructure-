@@ -114,13 +114,21 @@ export const HorizontalProjectsGallery: React.FC<HorizontalProjectsGalleryProps>
                         </span>
                       </div>
 
-                      <Link
-                        to="/contact"
-                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-[#142D45] dark:text-white bg-[#FAF9F6] dark:bg-[#1E293B] hover:bg-[#142D45] hover:text-white dark:hover:bg-[#B18A58] border border-[#E8E6E1] dark:border-[#2D3748] transition-all group/btn"
-                      >
-                        <span>INQUIRE</span>
-                        <ArrowRight className="w-3.5 h-3.5 text-[#B18A58] group-hover/btn:translate-x-0.5 group-hover/btn:text-white transition-all" />
-                      </Link>
+                      <div className="flex items-center gap-2">
+                        <Link
+                          to={`/projects/${project.id}`}
+                          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-[#142D45] hover:bg-[#070E18] dark:bg-[#1E3A5F] transition-all"
+                        >
+                          <span>DETAILS</span>
+                          <ArrowRight className="w-3.5 h-3.5 text-[#D4B07B]" />
+                        </Link>
+                        <Link
+                          to="/contact"
+                          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-[#142D45] dark:text-white bg-[#FAF9F6] dark:bg-[#1E293B] hover:bg-[#142D45] hover:text-white dark:hover:bg-[#B18A58] border border-[#E8E6E1] dark:border-[#2D3748] transition-all group/btn"
+                        >
+                          <span>INQUIRE</span>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -185,13 +193,21 @@ export const HorizontalProjectsGallery: React.FC<HorizontalProjectsGalleryProps>
                   <span className="text-[#142D45] dark:text-[#D4B07B] font-semibold text-[11px]">
                     {project.status}
                   </span>
-                  <Link
-                    to="/contact"
-                    className="text-[#B18A58] hover:underline font-bold uppercase tracking-wider text-[11px] flex items-center gap-1"
-                  >
-                    <span>Inquire</span>
-                    <ArrowRight className="w-3 h-3" />
-                  </Link>
+                  <div className="flex items-center gap-2">
+                    <Link
+                      to={`/projects/${project.id}`}
+                      className="text-[#132338] dark:text-white font-bold uppercase tracking-wider text-[11px] hover:underline"
+                    >
+                      Details &rarr;
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className="text-[#B18A58] hover:underline font-bold uppercase tracking-wider text-[11px] flex items-center gap-1"
+                    >
+                      <span>Inquire</span>
+                      <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

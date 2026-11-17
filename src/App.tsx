@@ -7,9 +7,13 @@ import { Footer } from './components/layout/Footer';
 // Pages
 import { Home } from './pages/Home';
 import { About } from './pages/About';
+import { AboutTopicPage } from './pages/AboutTopicPage';
 import { Expertise } from './pages/Expertise';
+import { ExpertiseDetailPage } from './pages/ExpertiseDetailPage';
 import { Projects } from './pages/Projects';
+import { ProjectDetailPage } from './pages/ProjectDetailPage';
 import { Industries } from './pages/Industries';
+import { IndustryDetailPage } from './pages/IndustryDetailPage';
 import { Contact } from './pages/Contact';
 import { Login } from './pages/Login';
 import { NotFound } from './pages/NotFound';
@@ -52,10 +56,23 @@ export const App: React.FC = () => {
         <AppLayout>
           <Routes>
             <Route path="/" element={<Home />} />
+            
+            {/* About Us Routes */}
             <Route path="/about" element={<About />} />
+            <Route path="/about/:topic" element={<AboutTopicPage />} />
+
+            {/* Expertise Routes */}
             <Route path="/expertise" element={<Expertise />} />
+            <Route path="/expertise/:expertiseId" element={<ExpertiseDetailPage />} />
+
+            {/* Projects Routes */}
             <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:projectId" element={<ProjectDetailPage />} />
+
+            {/* Industries Routes */}
             <Route path="/industries" element={<Industries />} />
+            <Route path="/industries/:industryId" element={<IndustryDetailPage />} />
+
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
             <Route path="*" element={<NotFound />} />

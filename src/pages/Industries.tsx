@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container } from '../components/common/Container';
 import { INDUSTRIES_LIST } from '../data/content';
 import { Button } from '../components/common/Button';
@@ -101,7 +102,7 @@ export const Industries: React.FC = () => {
                       <span className="text-[10px] font-bold uppercase tracking-widest text-[#9E7844] block">
                         Key Competencies
                       </span>
-                      <div className="space-y-1.5">
+                      <div className="space-y-1.5 mb-5">
                         {ind.keyAspects.map((aspect, i) => (
                           <div key={i} className="flex items-center gap-2 text-xs text-[#1F242A] dark:text-[#CBD5E1]">
                             <CheckCircle2 className="w-3.5 h-3.5 text-[#9E7844] shrink-0" />
@@ -109,6 +110,14 @@ export const Industries: React.FC = () => {
                           </div>
                         ))}
                       </div>
+
+                      <Link
+                        to={`/industries/${ind.id}`}
+                        className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#142D45] dark:text-[#D4B07B] hover:text-[#9E7844] transition-colors"
+                      >
+                        <span>EXPLORE SECTOR DETAILS</span>
+                        <ArrowRight className="w-3.5 h-3.5 text-[#9E7844]" />
+                      </Link>
                     </div>
                   </div>
                 </div>
