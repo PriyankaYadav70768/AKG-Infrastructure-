@@ -140,52 +140,56 @@ export const Hero: React.FC = () => {
           );
         })}
         {/* Subtle dark navy gradient overlays for effortless typography legibility */}
-        <div className="absolute inset-0 z-20 bg-gradient-to-r from-[#142D45]/92 via-[#142D45]/65 to-transparent pointer-events-none" />
-        <div className="absolute inset-0 z-20 bg-gradient-to-t from-[#142D45]/90 via-transparent to-black/35 pointer-events-none" />
+        <div className="absolute inset-0 z-20 bg-gradient-to-r from-[#0B1522]/95 via-[#0B1522]/80 sm:via-[#0B1522]/65 to-[#0B1522]/30 pointer-events-none" />
+        <div className="absolute inset-0 z-20 bg-gradient-to-t from-[#0B1522]/95 via-transparent to-black/40 pointer-events-none" />
       </div>
 
       {/* Main Content with Animated Key Transitions */}
-      <Container size="wide" className="relative z-30 my-auto pt-24 pb-12">
-        <div className="max-w-3xl space-y-6 text-left">
+      <Container size="wide" className="relative z-30 my-auto pt-20 sm:pt-28 pb-12 sm:pb-16">
+        <div className="max-w-3xl space-y-5 sm:space-y-6 text-left">
           {/* Animated Badge */}
-          <div
-            key={`tag-${currentSlide}`}
-            className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-[#B18A58]/50 bg-[#142D45]/60 backdrop-blur-md text-[#D4B07B] text-[11px] font-bold tracking-[0.2em] uppercase font-sans animate-fadeIn"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#B18A58]" />
-            {activeSlide.tag}
+          <div>
+            <div
+              key={`tag-${currentSlide}`}
+              className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[#D4B07B]/40 bg-[#0B1522]/80 backdrop-blur-md text-[#D4B07B] text-[10px] sm:text-[11px] font-bold tracking-[0.25em] uppercase font-sans animate-fadeIn shadow-sm"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4B07B] shadow-[0_0_8px_#D4B07B]" />
+              <span>{activeSlide.tag}</span>
+            </div>
           </div>
 
-          {/* Animated Display Heading */}
+          {/* Animated Display Heading - Two perfectly balanced lines */}
           <h1
             key={`title-${currentSlide}`}
-            className="font-serif text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-medium leading-[1.06] sm:leading-[1.03] tracking-tight text-[#FAF9F6] animate-fadeInUp break-words"
+            className="font-serif text-[2.5rem] xs:text-[2.85rem] sm:text-6xl md:text-7xl lg:text-[5.25rem] font-medium leading-[1.08] sm:leading-[1.04] tracking-[-0.02em] text-[#FAF9F6] animate-fadeInUp drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]"
           >
-            {activeSlide.title} <br />
-            <span className="italic font-normal text-[#D4B07B]">{activeSlide.highlight}</span>
+            <span className="block text-[#FAF9F6]">{activeSlide.title}</span>
+            <span className="block italic font-normal text-[#D4B07B] mt-1 sm:mt-1.5 drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]">
+              {activeSlide.highlight}
+            </span>
           </h1>
 
           {/* Animated Supporting Paragraph */}
           <p
             key={`desc-${currentSlide}`}
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 font-light leading-relaxed max-w-2xl font-sans animate-fadeIn"
+            className="text-sm sm:text-base md:text-lg text-[#E6EAF0] font-light leading-relaxed sm:leading-[1.7] max-w-2xl font-sans animate-fadeIn drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]"
           >
             {activeSlide.description}
           </p>
 
           {/* Two Interactive CTAs */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-3 sm:pt-4">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 sm:pt-3">
             <Link
               to={activeSlide.ctaPrimary.path}
-              className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs font-bold uppercase tracking-widest text-[#142D45] bg-[#FAF9F6] hover:bg-[#FAF9F6]/90 transition-all shadow-md hover:shadow-lg active:scale-[0.98] font-sans text-center"
+              className="inline-flex items-center justify-center gap-2.5 px-7 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs font-bold uppercase tracking-widest text-[#0B1522] bg-[#FAF9F6] hover:bg-white transition-all duration-300 shadow-md hover:shadow-xl active:scale-[0.98] font-sans text-center group/btn"
             >
               <span>{activeSlide.ctaPrimary.text}</span>
-              <ArrowRight className="w-4 h-4 text-[#B18A58]" />
+              <ArrowRight className="w-4 h-4 text-[#9E7844] transition-transform duration-300 group-hover/btn:translate-x-1" />
             </Link>
 
             <Link
               to={activeSlide.ctaSecondary.path}
-              className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs font-bold uppercase tracking-widest text-[#FAF9F6] border border-white/40 hover:border-white hover:bg-white/10 transition-all active:scale-[0.98] font-sans text-center"
+              className="inline-flex items-center justify-center gap-2.5 px-7 sm:px-8 py-3.5 sm:py-4 rounded-full text-xs font-bold uppercase tracking-widest text-[#FAF9F6] border border-white/40 hover:border-white hover:bg-white/10 transition-all duration-300 backdrop-blur-xs active:scale-[0.98] font-sans text-center"
             >
               <span>{activeSlide.ctaSecondary.text}</span>
             </Link>
