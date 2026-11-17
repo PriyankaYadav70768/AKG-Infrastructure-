@@ -79,8 +79,10 @@ export const Header: React.FC = () => {
                 <span>6306917991</span>
               </a>
 
-              {/* Theme Toggle */}
-              <ThemeToggle />
+              {/* Theme Toggle - Hidden on mobile viewports (< lg), accessible in mobile drawer menu */}
+              <div className="hidden lg:block">
+                <ThemeToggle />
+              </div>
 
               {/* Mandatory Prominent Login/Join Button */}
               <Link

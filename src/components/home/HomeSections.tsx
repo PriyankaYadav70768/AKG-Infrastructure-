@@ -363,28 +363,51 @@ export const ExpertiseSplitSection: React.FC = () => {
                 delay={index * 80}
                 distance={24}
                 duration={700}
-                className="py-8 sm:py-10 first:pt-0 last:pb-0 group transition-all duration-300 hover:pl-2"
+                className="py-5 sm:py-8 lg:py-10 first:pt-0 last:pb-0 group transition-all duration-300 hover:pl-2"
               >
-                <div className="flex items-baseline gap-4 mb-2">
-                  <span className="font-serif text-2xl font-light text-[#B18A58]">
-                    {item.number}
-                  </span>
-                  <h3 className="font-serif text-2xl sm:text-3xl font-medium text-[#142D45] dark:text-[#FAF9F6] group-hover:text-[#B18A58] transition-colors">
-                    {item.title}
-                  </h3>
+                {/* Desktop and Tablet full view */}
+                <div className="hidden sm:block">
+                  <div className="flex items-baseline gap-4 mb-2">
+                    <span className="font-serif text-2xl font-light text-[#B18A58]">
+                      {item.number}
+                    </span>
+                    <h3 className="font-serif text-2xl sm:text-3xl font-medium text-[#142D45] dark:text-[#FAF9F6] group-hover:text-[#B18A58] transition-colors">
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  <p className="text-sm sm:text-base text-[#777C80] dark:text-[#A0A6AC] font-light leading-relaxed max-w-2xl pl-10 mb-4 font-sans">
+                    {item.shortDesc}
+                  </p>
+
+                  <div className="pl-10">
+                    <Link
+                      to={`/expertise/${item.id}`}
+                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#142D45] dark:text-[#D4B07B] group-hover:translate-x-1 transition-transform font-sans"
+                    >
+                      <span>View</span>
+                      <ArrowRight className="w-3.5 h-3.5 text-[#B18A58]" />
+                    </Link>
+                  </div>
                 </div>
 
-                <p className="text-sm sm:text-base text-[#777C80] dark:text-[#A0A6AC] font-light leading-relaxed max-w-2xl pl-10 mb-4 font-sans">
-                  {item.shortDesc}
-                </p>
+                {/* Mobile streamlined view: clean title and prominent touch-friendly View button */}
+                <div className="flex sm:hidden items-center justify-between gap-3 py-1">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <span className="font-serif text-lg font-light text-[#B18A58] shrink-0">
+                      {item.number}
+                    </span>
+                    <h3 className="font-serif text-lg font-medium text-[#142D45] dark:text-[#FAF9F6] truncate">
+                      {item.title}
+                    </h3>
+                  </div>
 
-                <div className="pl-10">
                   <Link
-                    to="/expertise"
-                    className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#142D45] dark:text-[#D4B07B] group-hover:translate-x-1 transition-transform font-sans"
+                    to={`/expertise/${item.id}`}
+                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#142D45] dark:text-[#D4B07B] bg-[#142D45]/5 dark:bg-white/5 border border-[#B18A58]/40 hover:bg-[#142D45] hover:text-white dark:hover:bg-[#B18A58] dark:hover:text-[#0A121E] transition-all font-sans shrink-0 active:scale-95"
                   >
-                    <span>View Specifications</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-[#B18A58]" />
+                    <span>View</span>
+                    <ArrowRight className="w-3 h-3 text-[#B18A58]" />
                   </Link>
                 </div>
               </ScrollReveal>
