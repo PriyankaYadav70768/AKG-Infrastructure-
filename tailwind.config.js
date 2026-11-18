@@ -26,9 +26,10 @@ export default {
         }
       },
       fontFamily: {
-        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        sans: ['Manrope', 'Inter', 'system-ui', 'sans-serif'],
-        heading: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        serif: ['var(--font-heading)', '"Cormorant Garamond"', 'Georgia', 'serif'],
+        sans: ['var(--font-body)', 'Manrope', 'system-ui', '-apple-system', 'sans-serif'],
+        heading: ['var(--font-heading)', '"Cormorant Garamond"', 'Georgia', 'serif'],
+        body: ['var(--font-body)', 'Manrope', 'system-ui', '-apple-system', 'sans-serif'],
       }
     },
   },

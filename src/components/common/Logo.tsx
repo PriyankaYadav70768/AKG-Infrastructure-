@@ -27,7 +27,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '', variant = 'header' }
       <div className="flex flex-col text-left">
         <div className="flex items-center gap-1.5 leading-none mb-1">
           <span
-            className={`font-display font-extrabold text-[1.125rem] tracking-tight leading-tight ${
+            className={`font-sans font-extrabold text-[1.125rem] tracking-tight leading-tight ${
               isDarkBg ? 'text-white' : 'text-[#132338] dark:text-[#FAF9F6]'
             }`}
           >

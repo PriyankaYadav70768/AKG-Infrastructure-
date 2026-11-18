@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Manrope', system-ui, -apple-system, sans-serif;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -10,6 +15,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    font-family: var(--font-body);
   }
 
   html.dark {
@@ -18,11 +24,12 @@
   }
 
   body {
-    font-family: 'Manrope', 'Inter', system-ui, sans-serif;
+    font-family: var(--font-body);
     color: #1F242A;
     background-color: #FAF9F6;
     overflow-x: hidden;
     letter-spacing: -0.01em;
+    line-height: 1.6;
     scroll-behavior: smooth;
   }
 
@@ -31,10 +38,16 @@
     background-color: #0A121E;
   }
 
-  h1, h2, h3, h4 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+  /* Headings automatically use Cormorant Garamond with elegant proportions */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
     letter-spacing: -0.02em;
     font-weight: 600;
+  }
+
+  /* Ensure inputs, buttons, navigation and form controls use Manrope */
+  button, input, optgroup, select, textarea {
+    font-family: var(--font-body);
   }
 
   /* Custom subtle scrollbar */
