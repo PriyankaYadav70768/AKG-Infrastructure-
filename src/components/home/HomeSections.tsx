@@ -139,9 +139,9 @@ export const Hero: React.FC = () => {
             </div>
           );
         })}
-        {/* Subtle dark navy gradient overlays for effortless typography legibility */}
-        <div className="absolute inset-0 z-20 bg-gradient-to-r from-[#0B1522]/95 via-[#0B1522]/80 sm:via-[#0B1522]/65 to-[#0B1522]/30 pointer-events-none" />
-        <div className="absolute inset-0 z-20 bg-gradient-to-t from-[#0B1522]/95 via-transparent to-black/40 pointer-events-none" />
+        {/* Subtle, refined navy-blue gradient overlays highlighting lush land and roads while keeping effortless text legibility */}
+        <div className="absolute inset-0 z-20 bg-gradient-to-r from-[#0B1522]/80 via-[#132338]/50 sm:via-[#132338]/35 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 z-20 bg-gradient-to-t from-[#0B1522]/75 via-transparent to-[#0B1522]/25 pointer-events-none" />
       </div>
 
       {/* Main Content with Animated Key Transitions */}
